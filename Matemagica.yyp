@@ -11,6 +11,7 @@
   "defaultScriptType":0,
   "Folders":[
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Notas","folderPath":"folders/Notas.yy","name":"Notas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hitbox","folderPath":"folders/Objects/Hitbox.yy","name":"Hitbox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Objects/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -36,6 +37,7 @@
   "name":"Matemagica",
   "resources":[
     {"id":{"name":"FontMenu","path":"fonts/FontMenu/FontMenu.yy",},},
+    {"id":{"name":"Teste","path":"notes/Teste/Teste.yy",},},
     {"id":{"name":"IntBox_obj","path":"objects/IntBox_obj/IntBox_obj.yy",},},
     {"id":{"name":"intPai_obj","path":"objects/intPai_obj/intPai_obj.yy",},},
     {"id":{"name":"limitHitBox_obj","path":"objects/limitHitBox_obj/limitHitBox_obj.yy",},},
