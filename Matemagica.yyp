@@ -52,6 +52,7 @@
     {"id":{"name":"Valor","path":"notes/Valor/Valor.yy",},},
     {"id":{"name":"boxHitbox_obj","path":"objects/boxHitbox_obj/boxHitbox_obj.yy",},},
     {"id":{"name":"boxLimit_obj","path":"objects/boxLimit_obj/boxLimit_obj.yy",},},
+    {"id":{"name":"ContaControle_obj","path":"objects/ContaControle_obj/ContaControle_obj.yy",},},
     {"id":{"name":"IntBox_obj","path":"objects/IntBox_obj/IntBox_obj.yy",},},
     {"id":{"name":"intPai_obj","path":"objects/intPai_obj/intPai_obj.yy",},},
     {"id":{"name":"limitHitBox_obj","path":"objects/limitHitBox_obj/limitHitBox_obj.yy",},},
