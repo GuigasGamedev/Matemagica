@@ -1,6 +1,6 @@
 	//x e y iniciais dos textos
 	var _x1			= 100;
-	var _y1			= 170;
+	var _y1			= 250;
 	
 	//variaves para desnhar as opções
 	var _fonteMenu			= fontMenu_fnt;
@@ -28,14 +28,15 @@
 	
 	var _xTit = display_get_gui_width()/2;
 	var _yTit = (display_get_gui_height()/2) - 100;
+	var _titFont	= fontTitulo_fnt;
 	var _titText	= "Aperte qualquer botão para iniciar";
 	var _titImg		= Titulo_spr;
 	
 if(tela_de_titulo){
 	
 	draw_sprite_ext(_titImg, 0, _xTit, _yTit, 1, 1, 0, c_white, alfaTitulo);
-	funcoesTexto(_fonteMenu, _corMenu, _alinhamentoVMenu, _alinhamentoHTitulo);
-	draw_text_transformed_colour(_xTit, _yTit + 250, _titText, 1, 1, 0, _corMenu, _corMenu, _corSecund, _corSecund, alfaTitulo);
+	funcoesTexto(_titFont, _corMenu, _alinhamentoVMenu, _alinhamentoHTitulo);
+	draw_text_transformed_colour(_xTit, _yTit + 300, _titText, 1, 1, 0, _corMenu, _corMenu, _corSecund, _corSecund, alfaTitulo);
 	zeraTexto();
 	
 }
@@ -72,18 +73,15 @@ if(menuPrincipal){
 			//checando o botao esquerdo do mouse para selecionar uma opcao
 			if(mouse_check_button_pressed(mb_left)){
 				switch(index){
-					case 0:	//Nova Vida
+					case 0:	//Novo jogo
 						
 						desaparecendoMenu = 1;
-						if(!instance_exists(TransicaoDia_obj)){
-							var _transic = instance_create_layer(x, y, "Transicao", TransicaoDia_obj);	
-							_transic.inicioJogo = 1;
+						if(!instance_exists(Transicao_obj)){
+							transicao(Sala1, 1);
 						}
 					
 					break;
-					case 1:	//Continuar
-					
-						show_message("Continuar");
+					case 1: //Continuar
 					
 					break;
 					case 2:	//Opcoes
@@ -91,19 +89,6 @@ if(menuPrincipal){
 						desaparecendoMenu = 1;
 						transicao(Opcoes, 1);
 						
-					
-					break;
-					case 3:	//Extras
-					
-						desaparecendoMenu = 1;
-						transicao(Extras, 1);
-					
-					break;
-					case 4:	//Créditos
-					
-						desaparecendoMenu = 1;
-						transicao(Creditos, 1);
-					
 					break;
 					case 5:	//Sair
 					

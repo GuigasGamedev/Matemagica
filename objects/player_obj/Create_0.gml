@@ -13,7 +13,6 @@ dashDurationTimer = 0;	//timer da duração do dash
 canControl = 1;			//variavel para determinar se o jogador pode controlar o personagem
 canControlCD = 0;		//cooldown de controle     (essa variável serve para travar o jogador por um pequeno momento após interagir com um obj)
 canControlCDMAX = 15;	//cooldown max de controle
-upOrDown = 0;			//Variavel para determinar se o jogador está em alto ou baixo
 
 interCD = 0;			//variavel para determinar se o jogador pode interagir com os objetos
 interCDMax = 60;		//tempo máx para o jogador interagir com algo novamente
@@ -43,11 +42,7 @@ control = function(){
 		push(canControl, objId, objetoExiste);
 		
 		//lista de objetos que o jogador pode colidir dependo do estado do jogador
-		if(upOrDown){
-			colisions = [intPai_obj, limitHitBoxPlayerU_obj, portao_obj];
-		}else{
-			colisions = [intPai_obj, limitHitBoxPlayerD_obj, portao_obj];
-		}
+			colisions = [intPai_obj, limitHitBox_obj];
 			
 }
 
@@ -212,11 +207,6 @@ movimento = function(_andar){	//recebe uma booleana para saber se o jogador pode
 	var _left = keyboard_check(ord("A"));
 	var _right = keyboard_check(ord("D"));
 	var _dash = keyboard_check_pressed(vk_shift);
-	
-	var _debugUD = keyboard_check_pressed(ord("U"));
-	if(_debugUD){
-		upOrDown = !upOrDown;
-	}
 	
 	//se o jogador consegue controlar...
 	if(_andar){

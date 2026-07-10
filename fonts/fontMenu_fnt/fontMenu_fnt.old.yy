@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"FontMenu",
+  "%Name":"fontMenu_fnt",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":15,
@@ -201,7 +201,7 @@
     "253":{"character":253,"h":22,"offset":0,"shift":9,"w":9,"x":162,"y":50,},
     "254":{"character":254,"h":22,"offset":1,"shift":10,"w":8,"x":173,"y":50,},
     "255":{"character":255,"h":22,"offset":0,"shift":9,"w":9,"x":190,"y":122,},
-    "9647":{"character":9647,"h":22,"offset":2,"shift":16,"w":10,"x":178,"y":170,},
+    "9647":{"character":9647,"h":22,"offset":3,"shift":16,"w":10,"x":178,"y":170,},
   },
   "hinting":0,
   "includeTTF":false,
@@ -211,7 +211,7 @@
   "last":0,
   "lineHeight":19,
   "maintainGms1Font":false,
-  "name":"FontMenu",
+  "name":"fontMenu_fnt",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

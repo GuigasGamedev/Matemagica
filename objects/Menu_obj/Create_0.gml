@@ -73,13 +73,16 @@ ControleCamera = function(){						//metodo para verificar e descer a camera
 	if (movendo){									//entrando no modo movendo...
 		
 	    cam_y = lerp(cam_y, target_y, 0.06);		//y lentamente se aproxima do objetivo
+		
+		if (abs(cam_y - target_y) < 4){
+			aparecendoMenu = 1;						//faz aparecer as opçoes
+			menuPrincipal = 1;						//seta o menu principal para 1
+		}
 
 	    if (abs(cam_y - target_y) < 1){				//se a diferenca for de menos de 1 pixel...
 				
 	        cam_y = target_y;						//posicao vai direto para o objetivo
 	        movendo = 0;							//sai do modo movendo
-			menuPrincipal = 1;						//seta o menu principal para 1
-			aparecendoMenu = 1;						//faz aparecer as opçoes
 			
 	    }
 		
@@ -183,7 +186,7 @@ controleParalax = function(){
 #region Variaveis
 
 //Array de opcoes e index de escolha
-opcoes				= ["Nova Vida", "Continuar", "Opções", "Extras", "Créditos", "Sair"];
+opcoes				= ["Novo Jogo", "Continuar", "Opções", "Sair"];
 index				= 0;
 
 //numero de opcoes
