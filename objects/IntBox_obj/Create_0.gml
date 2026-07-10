@@ -1,5 +1,7 @@
 event_inherited();
 
+
+
 hitbox = instance_create_layer(x, y, "HitBox", boxHitbox_obj);
 
 

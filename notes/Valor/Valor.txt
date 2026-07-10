@@ -1,0 +1,7 @@
+operador -> se false é um número. Se true é um operador
+
+valor -> Se é operador:
+0 = soma
+1 = subtraçao
+2 = multiplicaçao
+3 = divisão
