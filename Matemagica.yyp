@@ -28,6 +28,7 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Caixas","folderPath":"folders/Sprites/Caixas.yy","name":"Caixas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"bothBox","folderPath":"folders/Sprites/Caixas/bothBox.yy","name":"bothBox","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Numeros","folderPath":"folders/Sprites/Caixas/Numeros.yy","name":"Numeros","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"pullBox","folderPath":"folders/Sprites/Caixas/pullBox.yy","name":"pullBox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"pushBox","folderPath":"folders/Sprites/Caixas/pushBox.yy","name":"pushBox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Testes","folderPath":"folders/Sprites/Caixas/Testes.yy","name":"Testes","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -35,6 +36,7 @@
     {"$GMFolder":"","%Name":"Hitboxs","folderPath":"folders/Sprites/Hitbox/Hitboxs.yy","name":"Hitboxs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Limites","folderPath":"folders/Sprites/Hitbox/Limites.yy","name":"Limites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Sprites/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Operacoes","folderPath":"folders/Sprites/Operacoes.yy","name":"Operacoes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Sprites/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Transicao","folderPath":"folders/Sprites/Transicao.yy","name":"Transicao","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -48,6 +50,7 @@
   "name":"Matemagica",
   "resources":[
     {"id":{"name":"fontMenu_fnt","path":"fonts/fontMenu_fnt/fontMenu_fnt.yy",},},
+    {"id":{"name":"fontNumero_fnt","path":"fonts/fontNumero_fnt/fontNumero_fnt.yy",},},
     {"id":{"name":"fontTitulo_fnt","path":"fonts/fontTitulo_fnt/fontTitulo_fnt.yy",},},
     {"id":{"name":"Valor","path":"notes/Valor/Valor.yy",},},
     {"id":{"name":"boxHitbox_obj","path":"objects/boxHitbox_obj/boxHitbox_obj.yy",},},

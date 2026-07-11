@@ -1,1 +1,1 @@
-pegaConta();
+calcularExpressoes();
