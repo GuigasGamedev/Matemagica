@@ -122,7 +122,7 @@ function calcularResultado(_expressao)
     show_debug_message("Resultado: " + string(_resultado));
 
 
-    //verificarPortas(_resultado);
+    verificarPortas(_resultado);
 }
 
 function encontrarCaixa(_x, _y)
@@ -138,4 +138,15 @@ function encontrarCaixa(_x, _y)
     }
 
     return noone;
+}
+
+function verificarPortas(_resultado)
+{
+    with(portao_obj)
+    {
+        if(_resultado == objetivo)
+        {
+            aberto = true;
+        }
+    }
 }

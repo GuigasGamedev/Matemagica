@@ -61,6 +61,7 @@
     {"id":{"name":"limitHitBox_obj","path":"objects/limitHitBox_obj/limitHitBox_obj.yy",},},
     {"id":{"name":"Menu_obj","path":"objects/Menu_obj/Menu_obj.yy",},},
     {"id":{"name":"player_obj","path":"objects/player_obj/player_obj.yy",},},
+    {"id":{"name":"portao_obj","path":"objects/portao_obj/portao_obj.yy",},},
     {"id":{"name":"screenShake_obj","path":"objects/screenShake_obj/screenShake_obj.yy",},},
     {"id":{"name":"Transicao_obj","path":"objects/Transicao_obj/Transicao_obj.yy",},},
     {"id":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
