@@ -9,6 +9,9 @@ dashCD = 0;				//cooldown do dash
 dashCDMAX = 45;			//cooldown máxdo dash
 dashDuration = 15;		//duração do dash
 dashDurationTimer = 0;	//timer da duração do dash
+rangeInt = 1250;
+
+visivel = 1;
 
 canControl = 1;			//variavel para determinar se o jogador pode controlar o personagem
 canControlCD = 0;		//cooldown de controle     (essa variável serve para travar o jogador por um pequeno momento após interagir com um obj)
@@ -105,7 +108,7 @@ objExist = function(){
 pull = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id (boxId)
 	
 	//Se objetos interagiveis existirem...
-	if(_exist){
+	if(_exist and distance_to_object(_obj) < rangeInt){
 		
 		//booleana para detectar se uma tecla foi apertada (E neste caso)
 		var _pull = keyboard_check_pressed(ord("E"));
@@ -152,7 +155,7 @@ pull = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 push = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id (boxId)
 	
 	//Se objetos interagiveis existirem...
-	if(_exist){
+	if(_exist and distance_to_object(_obj) < rangeInt){
 		
 		//booleana para detectar se uma tecla foi apertada (Q neste caso)
 		var _push = keyboard_check_pressed(ord("Q"));

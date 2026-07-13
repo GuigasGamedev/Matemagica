@@ -1,6 +1,6 @@
-Sistema de "tp" entre as rooms
+Sistema de "tp" entre as rooms -
 
-limitar a distancia de interação dos blocos
+limitar a distancia de interação dos blocos - 
 
 state machina do player
 
@@ -19,3 +19,5 @@ deixar os cubos e os elementos (numero e operador) bonitos
 camera suave
 
 trabalhar na função de efeitos sonoros e musica
+
+animação do tp

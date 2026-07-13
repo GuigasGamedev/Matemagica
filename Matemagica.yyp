@@ -16,6 +16,7 @@
     {"$GMFolder":"","%Name":"ControleDoJogo","folderPath":"folders/Objects/ControleDoJogo.yy","name":"ControleDoJogo","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ControleDaTela","folderPath":"folders/Objects/ControleDoJogo/ControleDaTela.yy","name":"ControleDaTela","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Transicoes","folderPath":"folders/Objects/ControleDoJogo/ControleDaTela/Transicoes.yy","name":"Transicoes","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"ControlesGerais","folderPath":"folders/Objects/ControleDoJogo/ControlesGerais.yy","name":"ControlesGerais","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hitbox","folderPath":"folders/Objects/Hitbox.yy","name":"Hitbox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Objects/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ObjetosInterativos","folderPath":"folders/Objects/ObjetosInterativos.yy","name":"ObjetosInterativos","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -64,6 +65,7 @@
     {"id":{"name":"portal_obj","path":"objects/portal_obj/portal_obj.yy",},},
     {"id":{"name":"portao_obj","path":"objects/portao_obj/portao_obj.yy",},},
     {"id":{"name":"screenShake_obj","path":"objects/screenShake_obj/screenShake_obj.yy",},},
+    {"id":{"name":"tpControl_obj","path":"objects/tpControl_obj/tpControl_obj.yy",},},
     {"id":{"name":"Transicao_obj","path":"objects/Transicao_obj/Transicao_obj.yy",},},
     {"id":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
     {"id":{"name":"SalaTeste","path":"rooms/SalaTeste/SalaTeste.yy",},},
@@ -97,8 +99,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
     {"roomId":{"name":"SalaTeste","path":"rooms/SalaTeste/SalaTeste.yy",},},
+    {"roomId":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

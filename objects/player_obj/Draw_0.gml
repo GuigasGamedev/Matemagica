@@ -1,4 +1,5 @@
 
 //apenas uma função para se desenhar
-draw_self();
-
+if(visivel){
+	draw_self();
+}

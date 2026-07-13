@@ -31,8 +31,7 @@ function transicao(_room, _escolha){
 	}
 }
 
-function screenshake(_time, _magnitude, _fade)
-{
+function screenshake(_time, _magnitude, _fade){
    with (screenShake_obj)
    {
       shake = true;
@@ -40,4 +39,22 @@ function screenshake(_time, _magnitude, _fade)
       shake_magnitude = _magnitude;
       shake_fade = _fade;
    }
+}
+
+function teleporte(){
+
+	if(!instance_exists(tpControl_obj)){
+		if(layer_exists("Control")){
+			if(!instance_exists(player_obj)){
+				if(layer_exists("Player")){
+			
+					var _player = instance_create_layer(portal_obj.x, portal_obj.y, "Player", player_obj);
+					_player.canControl = 0;
+					_player.visivel = 0;
+			
+					instance_create_layer(0, 0, "Control", tpControl_obj);
+				}
+			}
+		}
+	}
 }
