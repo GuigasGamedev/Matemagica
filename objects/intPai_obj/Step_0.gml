@@ -18,3 +18,5 @@ if(empurrando){
 	screenshake(_tempo, magnitude, ssDecrease);
 }
 
+x = abs(x);
+y = abs(y);

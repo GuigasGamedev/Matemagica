@@ -12,10 +12,13 @@
     {"name":"inst_60282527","path":"rooms/Sala1/Sala1.yy",},
     {"name":"inst_1664E514","path":"rooms/Sala1/Sala1.yy",},
     {"name":"inst_364A959C","path":"rooms/Sala1/Sala1.yy",},
+    {"name":"inst_7864A0C0","path":"rooms/Sala1/Sala1.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"Control","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Control","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Control","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"inst_7864A0C0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7864A0C0","objectId":{"name":"ContaControle_obj","path":"objects/ContaControle_obj/ContaControle_obj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":32.0,},
+      ],"layers":[],"name":"Control","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Scrennshake","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_60282527","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_60282527","objectId":{"name":"screenShake_obj","path":"objects/screenShake_obj/screenShake_obj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Scrennshake","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
@@ -33,6 +36,7 @@
         {"$GMRInstance":"v4","%Name":"inst_364A959C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_364A959C","objectId":{"name":"IntBox_obj","path":"objects/IntBox_obj/IntBox_obj.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"IntBox_obj","path":"objects/IntBox_obj/IntBox_obj.yy",},"propertyId":{"name":"operador","path":"objects/IntBox_obj/IntBox_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"IntBox_obj","path":"objects/IntBox_obj/IntBox_obj.yy",},"propertyId":{"name":"valor","path":"objects/IntBox_obj/IntBox_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"6",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"intPai_obj","path":"objects/intPai_obj/intPai_obj.yy",},"propertyId":{"name":"tipo","path":"objects/intPai_obj/intPai_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"both\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1376.0,"y":608.0,},
       ],"layers":[],"name":"Obj","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"HitBox","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

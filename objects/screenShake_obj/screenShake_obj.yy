@@ -9,8 +9,8 @@
   "name":"screenShake_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ControleDaTela",
+    "path":"folders/Objects/ControleDoJogo/ControleDaTela.yy",
   },
   "parentObjectId":null,
   "persistent":true,
