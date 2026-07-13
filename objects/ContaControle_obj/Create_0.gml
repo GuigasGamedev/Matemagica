@@ -13,7 +13,7 @@ function calcularExpressoes()
         // Só começa uma expressão se for um número
         if(!_box.operador)
         {
-            var _boxAnterior = instance_position(_box.x - boxSize, _box.y, IntBox_obj);
+			var _boxAnterior = encontrarCaixa(_box.x - boxSize, _box.y);
 
             // Se não existe caixa antes dela, ela é o início
             if(_boxAnterior == noone)
@@ -36,7 +36,7 @@ function lerExpressao(_boxInicial)
         array_push(_expressao, _boxAtual);
 
 
-        _boxAtual = instance_position(_boxAtual.x + sprite_get_width(bothBox1_spr), _boxAtual.y, IntBox_obj);
+        _boxAtual = encontrarCaixa(_boxAtual.x + boxSize, _boxAtual.y);
     }
 
 
@@ -123,4 +123,19 @@ function calcularResultado(_expressao)
 
 
     //verificarPortas(_resultado);
+}
+
+function encontrarCaixa(_x, _y)
+{
+    var _qtd = instance_number(IntBox_obj);
+
+    for(var _i = 0; _i < _qtd; _i++)
+    {
+        var _box = instance_find(IntBox_obj, _i);
+
+        if(_box.x == _x && _box.y == _y)
+            return _box;
+    }
+
+    return noone;
 }
