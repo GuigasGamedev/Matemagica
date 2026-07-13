@@ -1,0 +1,21 @@
+Sistema de "tp" entre as rooms
+
+limitar a distancia de interação dos blocos
+
+state machina do player
+
+fase inicial (com um "objeto tutorial")
+
+Hub com portal pra cada mundo
+
+transição entre salas
+
+menu de opções
+
+sistema de particulas
+
+deixar os cubos e os elementos (numero e operador) bonitos
+
+camera suave
+
+trabalhar na função de efeitos sonoros e musica
