@@ -1,4 +1,4 @@
-parandoObj(limitHitBox_obj);
+parandoObj(boxLimit_obj);
 
 if(highlight){	//se apos a caixa parar, ela ainda for a selecionada
 				//o estado dela vira 4 (abaixando luz)

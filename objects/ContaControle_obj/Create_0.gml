@@ -118,11 +118,9 @@ function calcularResultado(_expressao)
         }
     }
 
-
-    show_debug_message("Resultado: " + string(_resultado));
-
-
-    verificarPortas(_resultado);
+	if(instance_exists(portao_obj)){
+		verificarPortas(_resultado);
+	}
 }
 
 function encontrarCaixa(_x, _y)
