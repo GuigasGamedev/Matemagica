@@ -56,6 +56,10 @@ control = function(){
 		
 		checaEmpurrao();
 		//stateMachine(estado, estadoLado);
+		
+		if(global.tutoriais){
+			detectaColisaoTutorial();
+		}
 			
 		//debug para ligar ou desligar o gamefeel
 		var _gamefeel = keyboard_check_pressed(ord("O"));
@@ -216,6 +220,25 @@ push = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 			}
 		}	
 	}
+}
+
+detectaColisaoTutorial = function(){
+
+	if(instance_exists(tutorialArea_obj)){
+	
+		if(place_meeting(x, y, tutorialArea_obj)){
+		
+			global.colisaoTutorial = 1;
+			global.estagioTutorial = instance_nearest(x, y, tutorialArea_obj).estagio;
+		
+		}else{
+		
+			global.colisaoTutorial = 0;
+		
+		}
+		
+	}
+	
 }
 
 #endregion

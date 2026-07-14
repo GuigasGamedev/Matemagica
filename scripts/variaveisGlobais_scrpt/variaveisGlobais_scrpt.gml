@@ -7,3 +7,6 @@ global.gamefeel = 1;
 
 //mudar depois
 global.tutoriais = 1;
+
+global.colisaoTutorial = noone;
+global.estagioTutorial = 0;

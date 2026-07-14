@@ -1,5 +1,0 @@
-if(global.tutoriais){
-
-	detectaColisao();
-	
-}
