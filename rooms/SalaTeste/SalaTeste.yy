@@ -17,6 +17,7 @@
     {"name":"inst_77986BC1","path":"rooms/SalaTeste/SalaTeste.yy",},
     {"name":"inst_76C9151B","path":"rooms/SalaTeste/SalaTeste.yy",},
     {"name":"inst_7C1C81E5","path":"rooms/SalaTeste/SalaTeste.yy",},
+    {"name":"inst_11C0A32","path":"rooms/SalaTeste/SalaTeste.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -42,6 +43,9 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"IntBox_obj","path":"objects/IntBox_obj/IntBox_obj.yy",},"propertyId":{"name":"valor","path":"objects/IntBox_obj/IntBox_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"6",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"intPai_obj","path":"objects/intPai_obj/intPai_obj.yy",},"propertyId":{"name":"tipo","path":"objects/intPai_obj/intPai_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"both\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":608.0,},
+        {"$GMRInstance":"v4","%Name":"inst_11C0A32","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_11C0A32","objectId":{"name":"portao_obj","path":"objects/portao_obj/portao_obj.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"portao_obj","path":"objects/portao_obj/portao_obj.yy",},"propertyId":{"name":"objetivo","path":"objects/portao_obj/portao_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":544.0,},
       ],"layers":[],"name":"Obj","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"HitBox","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_1BDE4BA9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BDE4BA9","objectId":{"name":"boxLimit_obj","path":"objects/boxLimit_obj/boxLimit_obj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":15.0,"scaleY":1.0,"x":352.0,"y":832.0,},

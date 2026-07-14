@@ -1,1 +1,2 @@
-aberto = 0;
+abrindo = 0;
+timer = 60;

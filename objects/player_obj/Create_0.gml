@@ -52,7 +52,7 @@ control = function(){
 		push(canControl, objId, objetoExiste);
 		
 		//lista de objetos que o jogador pode colidir dependo do estado do jogador
-		colisions = [intPai_obj, limitHitBox_obj];
+		colisions = [intPai_obj, limitHitBox_obj, portao_obj];
 		
 		checaEmpurrao();
 		stateMachine(estado, estadoLado);
@@ -131,7 +131,7 @@ pull = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 		var _pull = keyboard_check_pressed(ord("E"));
 		
 		//o código só executa se o tipo da caixa for o correto
-		if(_obj.tipo == "pull" or _obj.tipo == "both"){
+		if((_obj.tipo == "pull" or _obj.tipo == "both") and _obj.canMove == 1){
 			if(_andar){ //se o jogador consegue se controlar...
 			
 				if(_pull && interCD == 0){ //se a tecla (E) foi apertada e o cooldown de interação for 0...
@@ -180,7 +180,7 @@ push = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 		var _push = keyboard_check_pressed(ord("Q"));
 		
 		//o código só executa se o tipo da caixa for o correto
-		if(_obj.tipo == "push" or _obj.tipo == "both"){
+		if((_obj.tipo == "push" or _obj.tipo == "both") and _obj.canMove == 1){
 			if(_andar){ //se o jogador consegue se controlar...
 			
 				if(_push && interCD == 0){ //se a tecla (Q) foi apertada e o cooldown de interação for 0...

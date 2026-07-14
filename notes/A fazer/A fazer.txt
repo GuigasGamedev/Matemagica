@@ -8,7 +8,7 @@ state machina do player - FEITO
 
 fazer o player ser empurrado pela caixa - FEITO
 
-portao Funcionar de fato 
+portao Funcionar de fato - FEITO
 
 fase inicial (com um "objeto tutorial")
 

@@ -144,7 +144,7 @@ function verificarPortas(_resultado)
     {
         if(_resultado == objetivo)
         {
-            aberto = true;
+            abrindo = true;
         }
     }
 }
