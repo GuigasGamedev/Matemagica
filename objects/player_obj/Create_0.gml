@@ -55,7 +55,7 @@ control = function(){
 		colisions = [intPai_obj, limitHitBox_obj, portao_obj];
 		
 		checaEmpurrao();
-		stateMachine(estado, estadoLado);
+		//stateMachine(estado, estadoLado);
 			
 		//debug para ligar ou desligar o gamefeel
 		var _gamefeel = keyboard_check_pressed(ord("O"));

@@ -1,0 +1,5 @@
+if(global.tutoriais){
+
+	detectaColisao();
+	
+}
