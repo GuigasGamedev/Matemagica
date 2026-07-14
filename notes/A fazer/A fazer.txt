@@ -2,6 +2,8 @@ Sistema de "tp" entre as rooms -
 
 limitar a distancia de interação dos blocos - 
 
+debug de ligar e desligar gamefeel (letra O) -
+
 state machina do player 
 
 fazer o player ser empurrado pela caixa

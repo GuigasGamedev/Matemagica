@@ -55,6 +55,7 @@
     {"id":{"name":"fontNumero_fnt","path":"fonts/fontNumero_fnt/fontNumero_fnt.yy",},},
     {"id":{"name":"fontTitulo_fnt","path":"fonts/fontTitulo_fnt/fontTitulo_fnt.yy",},},
     {"id":{"name":"A fazer","path":"notes/A fazer/A fazer.yy",},},
+    {"id":{"name":"StateMachinePlayer","path":"notes/StateMachinePlayer/StateMachinePlayer.yy",},},
     {"id":{"name":"Valor","path":"notes/Valor/Valor.yy",},},
     {"id":{"name":"boxHitbox_obj","path":"objects/boxHitbox_obj/boxHitbox_obj.yy",},},
     {"id":{"name":"boxLimit_obj","path":"objects/boxLimit_obj/boxLimit_obj.yy",},},

@@ -1,0 +1,12 @@
+Estado normal:
+0 - idol
+1 - andando
+2 - dash
+3 - poder
+
+Estado direçao:
+
+0 - frente
+1 - direita
+2 - cima
+3 - esquerda

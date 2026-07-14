@@ -11,6 +11,9 @@ dashDuration = 15;		//duração do dash
 dashDurationTimer = 0;	//timer da duração do dash
 rangeInt = 1250;
 
+estado = 0;				//estado para state machine
+estadoLado = 0;
+
 visivel = 1;
 
 canControl = 1;			//variavel para determinar se o jogador pode controlar o personagem
@@ -45,7 +48,9 @@ control = function(){
 		push(canControl, objId, objetoExiste);
 		
 		//lista de objetos que o jogador pode colidir dependo do estado do jogador
-			colisions = [intPai_obj, limitHitBox_obj];
+		colisions = [intPai_obj, limitHitBox_obj];
+		
+		stateMachine(estado, estadoLado);
 			
 		//debug para ligar ou desligar o gamefeel
 		var _gamefeel = keyboard_check_pressed(ord("O"));
@@ -125,6 +130,7 @@ pull = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 			
 				if(_pull && interCD == 0){ //se a tecla (E) foi apertada e o cooldown de interação for 0...
 					
+					estado = 3;
 					canControl = 0;						//tira o controle do jogador
 					canControlCD = canControlCDMAX;		//seta o cd do controle para o cdMax
 				
@@ -150,6 +156,7 @@ pull = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 				canControlCD -= 1;
 				if(canControlCD == 0){
 					canControl = 1;	
+					estado = 0;
 				}
 			}
 		}	
@@ -172,6 +179,7 @@ push = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 			
 				if(_push && interCD == 0){ //se a tecla (Q) foi apertada e o cooldown de interação for 0...
 				
+					estado = 3;
 					canControl = 0;						//tira o controle do jogador
 					canControlCD = canControlCDMAX;		//seta o cd do controle para o cdMax
 				
@@ -197,6 +205,7 @@ push = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 				canControlCD -= 1;
 				if(canControlCD == 0){
 					canControl = 1;	
+					estado = 0;
 				}
 			}
 		}	
@@ -218,10 +227,9 @@ movimento = function(_andar){	//recebe uma booleana para saber se o jogador pode
 	var _dash = keyboard_check_pressed(vk_shift);
 	
 	//se o jogador consegue controlar...
-	if(_andar){
-				
+	if(_andar){	
 			if(_dash && dashCD == 0){	//se a tecla de dash for apertada e o cooldown do dash for 0...
-			
+	
 				velDash = velDashMax;				//velocidade do dash recebe a velocidade de dash máxima
 				dashCD = dashCDMAX;					//aumenta o cd do dash
 			
@@ -233,6 +241,7 @@ movimento = function(_andar){	//recebe uma booleana para saber se o jogador pode
 						dashDurationTimer -= 1;	
 						if(dashDurationTimer == 0){	
 							velDash = 1;	//quando a duração terminar, volta a velocidade do dash para 1;
+							estado = 0;
 						}
 					}
 		
@@ -246,6 +255,25 @@ movimento = function(_andar){	//recebe uma booleana para saber se o jogador pode
 		//de acordo com o calculo de angulo pelo lenghdir
 		//up e down nao podem ser apertados ao mesmo tempo e nem left e right
 		if(_up xor _down or _left xor _right){
+			
+			if(_down){
+				estadoLado = 0;	
+			}
+			if(_right){
+				estadoLado = 1;	
+			}
+			if(_up){
+				estadoLado = 2;	
+			}
+			if(_left){
+				estadoLado = 3;	
+			}
+			
+			if(dashDurationTimer > 0){
+				estado = 2
+			}else{
+				estado = 1;	
+			}
 			//essa variavel temporária determina a velocidade que o player se move
 			var _velo = vel * velDash;
 			
@@ -259,8 +287,131 @@ movimento = function(_andar){	//recebe uma booleana para saber se o jogador pode
 			//automaticamente colide com os objetos do vetor _objs
 			move_and_collide(_movex, _movey, colisions);
 		
+		}else{
+			estado = 0;	
 		}
 	}	
+	
+}
+
+stateMachine = function(_estado, _estadoLado){
+
+	switch(_estado){
+	
+		case(0):		//Idol
+		
+			switch(_estadoLado){
+			
+				case(0):	//Frente
+					
+					show_debug_message("idol frente");
+					
+				break;
+				case(1):	//Direita
+					
+					show_debug_message("idol direita");
+					
+				break;
+				case(2):	//Cima
+					
+					show_debug_message("idol cima");
+					
+				break;
+				case(3):	//Esquerda
+					
+					show_debug_message("idol esquerda");
+					
+				break;
+			
+			}
+		
+		break;
+		case(1):		//Andando
+		
+			switch(_estadoLado){
+			
+				case(0):	//Frente
+					
+					show_debug_message("andando frente");
+					
+				break;
+				case(1):	//Direita
+					
+					show_debug_message("andando direita");
+					
+				break;
+				case(2):	//Cima
+					
+					show_debug_message("andando cima");
+					
+				break;
+				case(3):	//Esquerda
+					
+					show_debug_message("andando esquerda");
+					
+				break;
+			
+			}
+		
+		break;
+		case(2):		//Dash
+		
+			switch(_estadoLado){
+			
+				case(0):	//Frente
+					
+					show_debug_message("dash frente");
+					
+				break;
+				case(1):	//Direita
+					
+					show_debug_message("dash direita");
+					
+				break;
+				case(2):	//Cima
+					
+					show_debug_message("dash cima");
+					
+				break;
+				case(3):	//Esquerda
+					
+					show_debug_message("dash esquerda");
+					
+				break;
+			
+			}
+		
+		break;
+		case(3):		//Poder
+		
+			switch(_estadoLado){
+			
+				case(0):	//Frente
+					
+					show_debug_message("poder frente");
+					
+				break;
+				case(1):	//Direita
+					
+					show_debug_message("poder direita");
+					
+				break;
+				case(2):	//Cima
+					
+					show_debug_message("poder cima");
+					
+				break;
+				case(3):	//Esquerda
+					
+					show_debug_message("poder esquerda");
+					
+				break;
+			
+			}
+		
+		break;
+	
+	}
 	
 }
 	
