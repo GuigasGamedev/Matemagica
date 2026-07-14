@@ -9,13 +9,17 @@ if(highlight){
 
 if(puxando){
 	puxandoMet();
-	var _tempo = 1;
-	screenshake(_tempo, magnitude, ssDecrease);
+	if(global.gamefeel){
+		var _tempo = 1;
+		screenshake(_tempo, magnitude, ssDecrease);
+	}
 }
 if(empurrando){
 	empurrandoMet();
-	var _tempo = 1;
-	screenshake(_tempo, magnitude, ssDecrease);
+	if(global.gamefeel){
+		var _tempo = 1;
+		screenshake(_tempo, magnitude, ssDecrease);
+	}
 }
 
 x = abs(x);

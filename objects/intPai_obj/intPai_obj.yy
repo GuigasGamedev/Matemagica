@@ -12,8 +12,8 @@
   "name":"intPai_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"ObjetosInterativos",
-    "path":"folders/Objects/ObjetosInterativos.yy",
+    "name":"Pais",
+    "path":"folders/Objects/ObjetosInterativos/Pais.yy",
   },
   "parentObjectId":null,
   "persistent":false,

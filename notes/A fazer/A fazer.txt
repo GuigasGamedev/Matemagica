@@ -2,7 +2,9 @@ Sistema de "tp" entre as rooms -
 
 limitar a distancia de interação dos blocos - 
 
-state machina do player
+state machina do player 
+
+fazer o player ser empurrado pela caixa
 
 fase inicial (com um "objeto tutorial")
 

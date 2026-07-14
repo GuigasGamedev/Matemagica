@@ -47,6 +47,12 @@ control = function(){
 		//lista de objetos que o jogador pode colidir dependo do estado do jogador
 			colisions = [intPai_obj, limitHitBox_obj];
 			
+		//debug para ligar ou desligar o gamefeel
+		var _gamefeel = keyboard_check_pressed(ord("O"));
+		if(_gamefeel){
+			global.gamefeel = !global.gamefeel;	
+		}
+			
 }
 
 #region métodos de interação

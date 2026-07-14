@@ -6,8 +6,8 @@
   "name":"portal_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"ObjetosInterativos",
-    "path":"folders/Objects/ObjetosInterativos.yy",
+    "name":"Aleatorios",
+    "path":"folders/Objects/ObjetosInterativos/Aleatorios.yy",
   },
   "parentObjectId":null,
   "persistent":false,
