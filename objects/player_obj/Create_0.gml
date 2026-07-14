@@ -12,7 +12,9 @@ dashDurationTimer = 0;	//timer da duração do dash
 rangeInt = 1250;
 
 estado = 0;				//estado para state machine
-estadoLado = 0;
+estadoLado = 0;			//estado de lado para state machina
+
+colidindoCaixa = 0;		//checa se esta colidindo com a caixa
 
 visivel = 1;
 
@@ -50,13 +52,15 @@ control = function(){
 		//lista de objetos que o jogador pode colidir dependo do estado do jogador
 		colisions = [intPai_obj, limitHitBox_obj];
 		
-		stateMachine(estado, estadoLado);
+		checaEmpurrao();
+		//stateMachine(estado, estadoLado);
 			
 		//debug para ligar ou desligar o gamefeel
 		var _gamefeel = keyboard_check_pressed(ord("O"));
 		if(_gamefeel){
 			global.gamefeel = !global.gamefeel;	
 		}
+			
 			
 }
 
@@ -413,6 +417,78 @@ stateMachine = function(_estado, _estadoLado){
 	
 	}
 	
+}
+	
+checaEmpurrao = function(){
+	
+	var _margem = 2;
+
+	var _caixa = instance_nearest(x, y, IntBox_obj);
+	
+	switch(estadoLado){
+	
+		case(0):
+		
+			if(place_meeting(x, y+_margem, _caixa)){
+				if(_caixa.puxando){
+					canControl = 0;
+					hspeed = _caixa.hspeed;
+					vspeed = _caixa.vspeed;
+				}
+			}else{
+				canControl = 1;
+				hspeed = 0;
+				vspeed = 0;	
+			}
+		break;
+		case(1):
+		
+			if(place_meeting(x+_margem, y, _caixa)){
+					if(_caixa.puxando){
+					canControl = 0;
+					hspeed = _caixa.hspeed;
+					vspeed = _caixa.vspeed;
+				}
+			}else{
+				canControl = 1;
+				hspeed = 0;
+				vspeed = 0;	
+			}
+		
+		break;
+		case(2):
+		
+			if(place_meeting(x, y-_margem, _caixa)){
+				if(_caixa.puxando){
+					canControl = 0;
+					hspeed = _caixa.hspeed;
+					vspeed = _caixa.vspeed;
+				}
+			}else{
+				canControl = 1;
+				hspeed = 0;
+				vspeed = 0;	
+			}
+		
+		break;
+		case(3):
+		
+			if(place_meeting(x-_margem, y, _caixa)){
+					if(_caixa.puxando){
+					canControl = 0;
+					hspeed = _caixa.hspeed;
+					vspeed = _caixa.vspeed;
+				}
+			}else{
+				canControl = 1;
+				hspeed = 0;
+				vspeed = 0;	
+			}
+		
+		break;
+	
+	}
+		
 }
 	
 #endregion	
