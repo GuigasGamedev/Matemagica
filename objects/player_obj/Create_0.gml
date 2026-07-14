@@ -55,7 +55,7 @@ control = function(){
 		colisions = [intPai_obj, limitHitBox_obj];
 		
 		checaEmpurrao();
-		//stateMachine(estado, estadoLado);
+		stateMachine(estado, estadoLado);
 			
 		//debug para ligar ou desligar o gamefeel
 		var _gamefeel = keyboard_check_pressed(ord("O"));
@@ -416,6 +416,34 @@ stateMachine = function(_estado, _estadoLado){
 			}
 		
 		break;
+		case(4):
+			
+			switch(_estadoLado){
+			
+				case(0):	//Frente
+					
+					show_debug_message("empurrado Frente");
+					
+				break;
+				case(1):	//Direita
+					
+					show_debug_message("empurrado direita");
+					
+				break;
+				case(2):	//Cima
+					
+					show_debug_message("empurrado cima");
+					
+				break;
+				case(3):	//Esquerda
+					
+					show_debug_message("empurrado esquerda");
+					
+				break;
+			
+			}
+			
+		break;
 	
 	}
 	
@@ -432,13 +460,20 @@ checaEmpurrao = function(){
 					if(ragdollTimer == 0){
 						ragdollTimer = ragdollTimerMax;	
 					}
+					estado = 4;
 					canControl = 0;
 					hspeed = _caixa.hspeed;
 					vspeed = _caixa.vspeed;
+					
+					if(hspeed > 0)estadoLado = 1;
+					if(hspeed < 0)estadoLado = 3;
+					if(vspeed > 0)estadoLado = 2;
+					if(vspeed < 0)estadoLado = 0;
 				}
 			}else{
 				if(ragdollTimer >0){
 				
+					estado = 4;
 					ragdollTimer--;
 					hspeed = lerp(hspeed, 0, ragdoll);
 					vspeed = lerp(vspeed, 0, ragdoll);
