@@ -14,7 +14,9 @@ rangeInt = 1250;
 estado = 0;				//estado para state machine
 estadoLado = 0;			//estado de lado para state machina
 
-colidindoCaixa = 0;		//checa se esta colidindo com a caixa
+ragdollTimer = 0;
+ragdollTimerMax = 20;
+ragdoll = 0.07;
 
 visivel = 1;
 
@@ -425,69 +427,28 @@ checaEmpurrao = function(){
 
 	var _caixa = instance_nearest(x, y, IntBox_obj);
 	
-	switch(estadoLado){
-	
-		case(0):
-		
-			if(place_meeting(x, y+_margem, _caixa)){
+	if(place_meeting(x, y+_margem, _caixa)){
 				if(_caixa.puxando){
+					if(ragdollTimer == 0){
+						ragdollTimer = ragdollTimerMax;	
+					}
 					canControl = 0;
 					hspeed = _caixa.hspeed;
 					vspeed = _caixa.vspeed;
 				}
 			}else{
-				canControl = 1;
-				hspeed = 0;
-				vspeed = 0;	
-			}
-		break;
-		case(1):
-		
-			if(place_meeting(x+_margem, y, _caixa)){
-					if(_caixa.puxando){
-					canControl = 0;
-					hspeed = _caixa.hspeed;
-					vspeed = _caixa.vspeed;
+				if(ragdollTimer >0){
+				
+					ragdollTimer--;
+					hspeed = lerp(hspeed, 0, ragdoll);
+					vspeed = lerp(vspeed, 0, ragdoll);
+				
+				}else{
+					canControl = 1;
+					hspeed = 0;
+					vspeed = 0;	
 				}
-			}else{
-				canControl = 1;
-				hspeed = 0;
-				vspeed = 0;	
 			}
-		
-		break;
-		case(2):
-		
-			if(place_meeting(x, y-_margem, _caixa)){
-				if(_caixa.puxando){
-					canControl = 0;
-					hspeed = _caixa.hspeed;
-					vspeed = _caixa.vspeed;
-				}
-			}else{
-				canControl = 1;
-				hspeed = 0;
-				vspeed = 0;	
-			}
-		
-		break;
-		case(3):
-		
-			if(place_meeting(x-_margem, y, _caixa)){
-					if(_caixa.puxando){
-					canControl = 0;
-					hspeed = _caixa.hspeed;
-					vspeed = _caixa.vspeed;
-				}
-			}else{
-				canControl = 1;
-				hspeed = 0;
-				vspeed = 0;	
-			}
-		
-		break;
-	
-	}
 		
 }
 	
