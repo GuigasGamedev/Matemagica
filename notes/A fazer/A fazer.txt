@@ -1,12 +1,14 @@
-Sistema de "tp" entre as rooms -
+Sistema de "tp" entre as rooms - FEITO
 
-limitar a distancia de interação dos blocos - 
+limitar a distancia de interação dos blocos - FEITO
 
-debug de ligar e desligar gamefeel (letra O) -
+debug de ligar e desligar gamefeel (letra O) - FEITO
 
-state machina do player -
+state machina do player - FEITO
 
-fazer o player ser empurrado pela caixa
+fazer o player ser empurrado pela caixa - FEITO
+
+portao Funcionar de fato 
 
 fase inicial (com um "objeto tutorial")
 
