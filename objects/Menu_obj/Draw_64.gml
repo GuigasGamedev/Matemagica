@@ -77,7 +77,7 @@ if(menuPrincipal){
 						
 						desaparecendoMenu = 1;
 						if(!instance_exists(Transicao_obj)){
-							transicao(SalaTeste, 1);
+							transicao(Tutorial, 1);
 						}
 					
 					break;

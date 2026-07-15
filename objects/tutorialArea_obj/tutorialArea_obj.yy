@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"tutorialArea_obj",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"tutorialArea_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tutorial",
-    "path":"folders/Objects/ControleDoJogo/Tutorial.yy",
+    "name":"Hitbox",
+    "path":"folders/Objects/Hitbox.yy",
   },
   "parentObjectId":null,
   "persistent":false,

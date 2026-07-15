@@ -229,7 +229,7 @@ detectaColisaoTutorial = function(){
 		if(place_meeting(x, y, tutorialArea_obj)){
 		
 			global.colisaoTutorial = 1;
-			global.estagioTutorial = instance_nearest(x, y, tutorialArea_obj).estagio;
+			global.estagioTutorial = instance_place(x, y, tutorialArea_obj).estagio;
 		
 		}else{
 		

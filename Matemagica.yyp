@@ -26,6 +26,7 @@
     {"$GMFolder":"","%Name":"Pais","folderPath":"folders/Objects/ObjetosInterativos/Pais.yy","name":"Pais","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Room","folderPath":"folders/Room.yy","name":"Room","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Room/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Introdução","folderPath":"folders/Room/Introdução.yy","name":"Introdução","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -76,7 +77,9 @@
     {"id":{"name":"tutorial_obj","path":"objects/tutorial_obj/tutorial_obj.yy",},},
     {"id":{"name":"tutorialArea_obj","path":"objects/tutorialArea_obj/tutorialArea_obj.yy",},},
     {"id":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
+    {"id":{"name":"SalaBase","path":"rooms/SalaBase/SalaBase.yy",},},
     {"id":{"name":"SalaTeste","path":"rooms/SalaTeste/SalaTeste.yy",},},
+    {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"id":{"name":"FuncoesGerais_scrpt","path":"scripts/FuncoesGerais_scrpt/FuncoesGerais_scrpt.yy",},},
     {"id":{"name":"variaveisGlobais_scrpt","path":"scripts/variaveisGlobais_scrpt/variaveisGlobais_scrpt.yy",},},
     {"id":{"name":"bothBox1_spr","path":"sprites/bothBox1_spr/bothBox1_spr.yy",},},
@@ -115,6 +118,8 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"SalaTeste","path":"rooms/SalaTeste/SalaTeste.yy",},},
     {"roomId":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
+    {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
+    {"roomId":{"name":"SalaBase","path":"rooms/SalaBase/SalaBase.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

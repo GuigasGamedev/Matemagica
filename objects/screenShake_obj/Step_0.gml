@@ -1,6 +1,7 @@
-var _cam_x = player_obj.x - camera_get_view_width(view_camera[0]) / 2;
-var _cam_y = player_obj.y - camera_get_view_height(view_camera[0]) / 2;
-
+if(instance_exists(player_obj)){
+	var _cam_x = player_obj.x - camera_get_view_width(view_camera[0]) / 2;
+	var _cam_y = player_obj.y - camera_get_view_height(view_camera[0]) / 2;
+}
 if (shake){ 
 	shake_time --; 
    

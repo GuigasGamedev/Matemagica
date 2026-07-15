@@ -16,6 +16,12 @@ animacaoTp = function(){
 			
 		}
 	
+		if(instance_exists(tutorial_obj)){
+		
+			global.tutoriais = 1;
+		
+		}
+		
 		instance_destroy(id);
 	
 	}

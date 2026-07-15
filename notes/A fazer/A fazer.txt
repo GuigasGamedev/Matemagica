@@ -10,13 +10,13 @@ fazer o player ser empurrado pela caixa - FEITO
 
 portao Funcionar de fato - FEITO
 
-fase inicial (com um "objeto tutorial")
-
-Hub com portal pra cada mundo
+fase inicial (com um "objeto tutorial") - FEITO
 
 transição entre salas
 
-menu de opções
+Hub com portal pra cada mundo
+
+animação do tp
 
 sistema de particulas
 
@@ -24,6 +24,8 @@ deixar os cubos e os elementos (numero e operador) bonitos
 
 camera suave
 
+funcoes de zoom na camera
+
 trabalhar na função de efeitos sonoros e musica
 
-animação do tp
+menu de opções
