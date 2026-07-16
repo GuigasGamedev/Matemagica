@@ -9,7 +9,8 @@ contMax = 20;
 
 estadoAnim = 0;
 
-smooth = 0.7;
+smoothOriginal = .3;
+smooth = 0;
 imagemX = 0;
 imagemY = 0;
 	
@@ -28,10 +29,6 @@ localizaColisao = function(){
 		
 		}
 }
-
-
-
-	
 
 
 alteraImagem = function(_estagio){

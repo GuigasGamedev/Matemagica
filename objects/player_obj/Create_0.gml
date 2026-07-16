@@ -16,13 +16,15 @@ rangeInt = 1250;		//range de interação
 estado = 0;				//estado para state machine
 estadoLado = 0;			//estado de lado para state machina
 
+empurrado = 0;
+
 ragdollTimer = 0;
 ragdollTimerMax = 20;
 ragdoll = 0.07;
 
 visivel = 1;
 
-canControl = 1;			//variavel para determinar se o jogador pode controlar o personagem
+canControl = 0;			//variavel para determinar se o jogador pode controlar o personagem
 canControlCD = 0;		//cooldown de controle     (essa variável serve para travar o jogador por um pequeno momento após interagir com um obj)
 canControlCDMAX = 15;	//cooldown max de controle
 
@@ -45,7 +47,7 @@ for (var i = 0; i < instance_number(IntBox_obj); ++i){
 //método geral
 control = function(){
 	
-		movimento(canControl);		//chamando o método de movimento
+		movimento();		//chamando o método de movimento
 		objId = objIdGet();			//chamando o método boxIdGet() para dar um retorno de id ao boxId
 		objetoExiste = objIdGet();
 		
@@ -160,19 +162,6 @@ pull = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 					}
 				}
 			}
-			
-			//diminui os contadores de cooldown
-			if(interCD > 0){
-				interCD -= 1;	
-			}
-		
-			if(canControlCD > 0){
-				canControlCD -= 1;
-				if(canControlCD == 0){
-					canControl = 1;	
-					estado = 0;
-				}
-			}
 		}	
 	}
 		
@@ -209,19 +198,6 @@ push = function(_andar, _obj, _exist){ //recebe um booleano (canControl) e um id
 					}
 				}
 			}
-		
-			//diminui os contadores de cooldown
-			if(interCD > 0){
-				interCD -= 1;	
-			}
-		
-			if(canControlCD > 0){
-				canControlCD -= 1;
-				if(canControlCD == 0){
-					canControl = 1;	
-					estado = 0;
-				}
-			}
 		}	
 	}
 }
@@ -250,17 +226,18 @@ detectaColisaoTutorial = function(){
 #region metodos de movimentação ou animação
 
 //método de movimentação do jogador
-movimento = function(_andar){	//recebe uma booleana para saber se o jogador pode andar	
-	
-	//detecta booleanas para teclas do teclado para setar os comandos
-	var _up = keyboard_check(ord("W"));
-	var _down = keyboard_check(ord("S"));
-	var _left = keyboard_check(ord("A"));
-	var _right = keyboard_check(ord("D"));
-	var _dash = keyboard_check_pressed(vk_shift);
+movimento = function(){	//recebe uma booleana para saber se o jogador pode andar	
 	
 	//se o jogador consegue controlar...
-	if(_andar){	
+	if(canControl){	
+		
+			//detecta booleanas para teclas do teclado para setar os comandos
+			var _up = keyboard_check(ord("W"));
+			var _down = keyboard_check(ord("S"));
+			var _left = keyboard_check(ord("A"));
+			var _right = keyboard_check(ord("D"));
+			var _dash = keyboard_check_pressed(vk_shift);
+		
 			if(_dash && dashCD == 0){	//se a tecla de dash for apertada e o cooldown do dash for 0...
 	
 				velDash = velDashMax;				//velocidade do dash recebe a velocidade de dash máxima
@@ -501,6 +478,7 @@ checaEmpurrao = function(){
 				if(_caixa.puxando){
 					if(ragdollTimer == 0){
 						ragdollTimer = ragdollTimerMax;	
+						empurrado = 1;
 					}
 					estado = 4;
 					canControl = 0;
@@ -520,7 +498,8 @@ checaEmpurrao = function(){
 					hspeed = lerp(hspeed, 0, ragdoll);
 					vspeed = lerp(vspeed, 0, ragdoll);
 				
-				}else{
+				}else if(empurrado){
+					empurrado = 0;
 					canControl = 1;
 					hspeed = 0;
 					vspeed = 0;	

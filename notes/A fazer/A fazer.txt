@@ -12,7 +12,7 @@ portao Funcionar de fato - FEITO
 
 fase inicial (com um "objeto tutorial") - FEITO
 
-transição entre salas
+transição entre salas - FEITO
 
 Hub com portal pra cada mundo
 

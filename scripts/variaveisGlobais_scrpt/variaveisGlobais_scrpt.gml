@@ -12,3 +12,5 @@ global.tutoriais = 0;
 
 global.colisaoTutorial = noone;
 global.estagioTutorial = 0;
+
+global.primeiraVezHub = 1;

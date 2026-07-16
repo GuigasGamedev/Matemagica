@@ -1,5 +1,5 @@
 if(global.gamefeel){
-	smooth = .1;
+	smooth = smoothOriginal;
 }else{
 	smooth = 1;
 }
