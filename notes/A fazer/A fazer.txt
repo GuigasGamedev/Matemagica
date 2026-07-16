@@ -22,6 +22,8 @@ sistema de particulas
 
 deixar os cubos e os elementos (numero e operador) bonitos
 
+diminuir boxHitbox
+
 camera suave
 
 funcoes de zoom na camera

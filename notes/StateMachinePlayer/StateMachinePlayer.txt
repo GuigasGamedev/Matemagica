@@ -3,6 +3,8 @@ Estado normal:
 1 - andando
 2 - dash
 3 - poder
+4 - empurrado
+5 - transicao
 
 Estado direçao:
 

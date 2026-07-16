@@ -58,3 +58,42 @@ function teleporte(){
 		}
 	}
 }
+
+function trocaSala(){
+
+	if(!instance_exists(tpSala_obj)){
+		if(layer_exists("Control")){
+					instance_create_layer(0,0, "Control", tpSala_obj);
+		}
+	}
+}
+
+function chegaSala(){
+	
+	if(instance_exists(tpSala_obj)){
+		if(layer_exists("Player")){
+			if(!instance_exists(player_obj)){
+				if(instance_exists(EntreSalas_obj)){
+			
+					var _objChegada = noone;
+					var _inst = [];
+			
+					var _num = instance_number(EntreSalas_obj);
+				
+					for(var _i = 0; _i < _num; _i++){
+						_inst[_i] = instance_find(EntreSalas_obj, _i);
+					}
+			
+					for(var _i = 0; _i < _num; _i++){
+						if(_inst[_i].chegada){
+							_objChegada = _inst[_i];	
+						}
+					}
+				
+					instance_create_layer(_objChegada.x, _objChegada.y - 50, "Player", player_obj);
+					//player_obj.estado = 5;
+				}
+			}
+		}
+	}
+}

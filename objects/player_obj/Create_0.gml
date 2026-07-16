@@ -2,6 +2,8 @@
 #region variáveis
 
 vida = 1;				//vida (obvio)
+velOriginal = 4;		//velocidade Original
+velTrans = 2;			//velocidade na transicao
 vel = 4;				//velocidade
 velDash = 1;			//velocidade do dash
 velDashMax = 5;			//velocidade máxima do dash
@@ -9,7 +11,7 @@ dashCD = 0;				//cooldown do dash
 dashCDMAX = 45;			//cooldown máxdo dash
 dashDuration = 15;		//duração do dash
 dashDurationTimer = 0;	//timer da duração do dash
-rangeInt = 1250;
+rangeInt = 1250;		//range de interação
 
 estado = 0;				//estado para state machine
 estadoLado = 0;			//estado de lado para state machina
@@ -55,7 +57,9 @@ control = function(){
 		colisions = [intPai_obj, limitHitBox_obj, portao_obj];
 		
 		checaEmpurrao();
-		//stateMachine(estado, estadoLado);
+		stateMachine(estado, estadoLado);
+		
+		detectaSalaTrans();
 		
 		if(global.tutoriais){
 			detectaColisaoTutorial();
@@ -300,7 +304,7 @@ movimento = function(_andar){	//recebe uma booleana para saber se o jogador pode
 			
 			if(dashDurationTimer > 0){
 				estado = 2
-			}else{
+			}else if(estado != 4 and estado != 5){
 				estado = 1;	
 			}
 			//essa variavel temporária determina a velocidade que o player se move
@@ -439,7 +443,7 @@ stateMachine = function(_estado, _estadoLado){
 			}
 		
 		break;
-		case(4):
+		case(4):	//empurrado
 			
 			switch(_estadoLado){
 			
@@ -466,6 +470,21 @@ stateMachine = function(_estado, _estadoLado){
 			
 			}
 			
+		break;
+		case(5):	//transicao
+			
+				if(!global.salaTrocando){
+					global.salaTrocando = 1;
+					trocaSala();
+				}
+			
+				canControl = 0;
+				vel = velTrans;
+				estadoLado = 2;
+				vspeed = -vel;	
+			
+			show_debug_message("transicao");
+		
 		break;
 	
 	}
@@ -509,6 +528,23 @@ checaEmpurrao = function(){
 			}
 		
 }
+	
+detectaSalaTrans = function(){
+
+	if(place_meeting(x, y, EntreSalas_obj)){
+	
+		var _transicao = instance_place(x, y, EntreSalas_obj);
+		
+		if(_transicao != noone){
+			_transicao.defineId();
+			if(!_transicao.chegada){
+				estado = 5;
+			}
+		}
+	}	
+}
+	
+
 	
 #endregion	
 

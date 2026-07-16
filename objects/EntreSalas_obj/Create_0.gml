@@ -1,0 +1,9 @@
+if(!chegada){
+	global.roomDest = roomD;
+}
+
+defineId = function(){
+
+	global.entreSalas = id;
+	
+}

@@ -3,6 +3,9 @@ global.roomDest		= noone;
 
 global.tptimer = 120;
 
+global.salaTrocando = 0;
+global.entreSalas = noone;
+
 global.gamefeel = 1;
 
 global.tutoriais = 0;
