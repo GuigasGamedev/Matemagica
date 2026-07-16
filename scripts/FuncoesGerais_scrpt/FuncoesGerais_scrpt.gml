@@ -49,7 +49,7 @@ function teleporte(){
 				if(!instance_exists(player_obj)){
 					if(layer_exists("Player")){
 					
-						var _player = instance_create_layer(portal_obj.x, portal_obj.y, "Player", player_obj);
+						var _player = instance_create_layer(portal_obj.x, portal_obj.y-50, "Player", player_obj);
 						_player.canControl = 0;
 						_player.visivel = 0;
 			

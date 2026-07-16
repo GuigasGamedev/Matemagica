@@ -2,4 +2,4 @@
 
 teleporte();
 
-chegaSala()
+//chegaSala();

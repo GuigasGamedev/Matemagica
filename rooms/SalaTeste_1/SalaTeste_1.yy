@@ -65,8 +65,8 @@
   ],
   "name":"SalaTeste_1",
   "parent":{
-    "name":"Room",
-    "path":"folders/Room.yy",
+    "name":"BasesETestes",
+    "path":"folders/Room/BasesETestes.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

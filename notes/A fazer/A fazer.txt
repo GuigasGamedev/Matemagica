@@ -16,15 +16,15 @@ transição entre salas - FEITO
 
 Hub com portal pra cada mundo
 
-animação do tp
-
-sistema de particulas
+sistema de particulas e botar particula em tudo
 
 deixar os cubos e os elementos (numero e operador) bonitos
 
 diminuir boxHitbox
 
 camera suave
+
+animação do tp
 
 funcoes de zoom na camera
 

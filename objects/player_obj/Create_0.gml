@@ -24,7 +24,7 @@ ragdoll = 0.07;
 
 visivel = 1;
 
-canControl = 0;			//variavel para determinar se o jogador pode controlar o personagem
+canControl = 1;			//variavel para determinar se o jogador pode controlar o personagem
 canControlCD = 0;		//cooldown de controle     (essa variável serve para travar o jogador por um pequeno momento após interagir com um obj)
 canControlCDMAX = 15;	//cooldown max de controle
 
@@ -62,6 +62,7 @@ control = function(){
 		stateMachine(estado, estadoLado);
 		
 		detectaSalaTrans();
+		detectaPotal();
 		
 		if(global.tutoriais){
 			detectaColisaoTutorial();
@@ -281,7 +282,7 @@ movimento = function(){	//recebe uma booleana para saber se o jogador pode andar
 			
 			if(dashDurationTimer > 0){
 				estado = 2
-			}else if(estado != 4 and estado != 5){
+			}else if(estado != 4 and estado != 5 and estado != 6){
 				estado = 1;	
 			}
 			//essa variavel temporária determina a velocidade que o player se move
@@ -297,7 +298,7 @@ movimento = function(){	//recebe uma booleana para saber se o jogador pode andar
 			//automaticamente colide com os objetos do vetor _objs
 			move_and_collide(_movex, _movey, colisions);
 		
-		}else{
+		}else if(estado != 4 and estado != 5 and estado != 6){
 			estado = 0;	
 		}
 	}	
@@ -463,6 +464,24 @@ stateMachine = function(_estado, _estadoLado){
 			show_debug_message("transicao");
 		
 		break;
+		case(6):	//tp
+			var _smooth = .2;
+			
+			canControl = 0;
+			global.tutoriais = 0;
+
+			x = lerp(x, global.tpip.x, _smooth);
+			y = lerp(y, global.tpip.y, _smooth);
+			
+			if((x - global.tpip.x < 5 or x - global.tpip.x < -5) and (y - global.tpip.y < 5 or x - global.tpip.x < -5)){
+			
+				//animaçao de tp
+				
+				room_goto(global.roomDest);
+			
+			}
+			
+		break;
 	
 	}
 	
@@ -500,6 +519,7 @@ checaEmpurrao = function(){
 				
 				}else if(empurrado){
 					empurrado = 0;
+					estado = 0;
 					canControl = 1;
 					hspeed = 0;
 					vspeed = 0;	
@@ -523,6 +543,27 @@ detectaSalaTrans = function(){
 	}	
 }
 	
+detectaPotal = function(){
+	
+	var _tp = keyboard_check_pressed(ord("F"));
+
+	if(place_meeting(x, y, portal_obj)){
+	
+		var _portal = instance_place(x, y, portal_obj);
+		
+		if(_portal != noone){
+			_portal.defineId();
+			if(!_portal.chegada){
+				
+				if(_tp){
+					estado = 6;
+				}
+				
+			}
+		}		
+	}	
+	
+}
 
 	
 #endregion	

@@ -3,6 +3,6 @@
 if(!global.primeiraVezHub){
 	teleporte();
 }else{
-	chegaSala();
+	//chegaSala();
 	global.primeiraVezHub = 0;
 }
