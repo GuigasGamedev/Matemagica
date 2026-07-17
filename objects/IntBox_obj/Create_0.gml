@@ -156,6 +156,13 @@ stateMachine = function(){
 		case 5: //se movendo
 			image_speed = 0;
 			image_index = 13;
+			
+			var _xMin = x - (sprite_get_width(bothBox1_spr) / 2);
+			var _xMax = x + (sprite_get_width(bothBox1_spr) / 2);
+			var _ymin = (y + (sprite_get_height(bothBox1_spr)/2)) - 50;
+			var _ymax = (y + (sprite_get_height(bothBox1_spr)/2));
+			
+			criaParticulas(poeiraCaixa_obj, _xMin, _xMax, _ymin, _ymax);
 			//este case sai do 5 pelo método de colisão com a limitHitBox_obj
 		break;
 		case 6: //desligando

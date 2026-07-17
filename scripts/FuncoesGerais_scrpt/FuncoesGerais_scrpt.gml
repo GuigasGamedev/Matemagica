@@ -99,3 +99,16 @@ function chegaSala(){
 		}
 	}
 }
+	
+function criaParticulas(_particula, _xMin, _xMax, _yMin, _yMax){
+	randomise();
+
+	if(layer_exists("Particulas")){
+		var _x = random_range(_xMin, _xMax);
+		var _y = random_range(_yMin, _yMax);
+	
+		instance_create_layer(_x, _y, "Particulas", _particula);
+	
+	}
+	
+}
