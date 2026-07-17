@@ -14,11 +14,15 @@ fase inicial (com um "objeto tutorial") - FEITO
 
 transição entre salas - FEITO
 
-Hub com portal pra cada mundo
+Hub com portal pra cada mundo - FEITO
 
 sistema de particulas e botar particula em tudo
 
 deixar os cubos e os elementos (numero e operador) bonitos
+
+Adicionar sprites
+
+tentar fazer iluminação dinamica
 
 diminuir boxHitbox
 
