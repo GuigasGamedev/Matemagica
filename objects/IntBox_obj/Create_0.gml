@@ -1,6 +1,7 @@
 event_inherited();
 
-
+ligandoParticulas = 1;
+moveParticulas = 1;
 
 hitbox = instance_create_layer(x, y, "HitBox", boxHitbox_obj);
 
@@ -128,6 +129,16 @@ stateMachine = function(){
 			image_index = 0;
 		break;	
 		case 1: //ligando
+			if(global.gamefeel){
+				if(ligandoParticulas){
+			
+					for(var _i = 0; _i < 20; _i++){
+						criaParticulas(PartBrancaCaixa_obj, x, x, y, y,);
+					}
+			
+					ligandoParticulas = 0;
+				}
+				}
 			image_speed = 1.3;
 			if(image_index >= 7){
 				estado = 2;	
@@ -171,6 +182,7 @@ stateMachine = function(){
 			//este case sai do 5 pelo método de colisão com a limitHitBox_obj
 		break;
 		case 6: //desligando
+			ligandoParticulas = 1;
 			apagando = 0; //assim que ele entra nesse estado ele zera o apagando para o if la de cima rodar apenas 1 vez
 			image_speed = .6;
 			if(image_index >=12.6){
