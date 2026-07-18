@@ -1,11 +1,11 @@
 direction = random(349);
 
-scale = random_range(.6, .8);
+scale = random_range(.7, 1.3);
 
 image_yscale = scale;
 image_xscale = scale;
 
-speed = random_range(10, 15);
+speed = random_range(5, 10);
 
 smoothSpeed = .03;
 

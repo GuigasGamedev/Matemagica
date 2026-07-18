@@ -7,7 +7,7 @@ direction = random(349);
 
 speed = random_range(5, 30);
 
-smoothSpeed = .03
+smoothSpeed = .1;
 
 alphaDecay = random_range(.03, .06);
 

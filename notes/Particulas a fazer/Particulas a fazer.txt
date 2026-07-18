@@ -1,8 +1,11 @@
 Poeira da caixa - Feita
 particulas caixa - Feita
 
+particulas colisao caixa - 
+
 Preciso da sprite{
-	poeira do player
+	poeira do player andando
+	poeira do player empurrado
 	poderes do player Puxao e empurrao
 	Dash do player (posso reaproveitar os poderes)
 }

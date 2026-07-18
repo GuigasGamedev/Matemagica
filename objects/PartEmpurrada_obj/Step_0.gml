@@ -2,7 +2,7 @@ depth = -y;
 
 image_alpha -= alphaDecay;
 
-direction += sin(delta_time/1000000) * ramDir;
+direction += sin((delta_time/1000000)+ramDir);
 
 speed = lerp(speed, 0, smoothSpeed);
 

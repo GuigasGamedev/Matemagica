@@ -133,7 +133,7 @@ stateMachine = function(){
 				if(ligandoParticulas){
 			
 					for(var _i = 0; _i < 20; _i++){
-						criaParticulas(PartBrancaCaixa_obj, x, x, y, y,);
+						criaParticulas(PartBrancaCaixa_obj, x, x, y, y);
 					}
 			
 					ligandoParticulas = 0;
@@ -178,10 +178,17 @@ stateMachine = function(){
 			
 			if(global.gamefeel){
 			
+				var _marg = 75;
+	
+				var _xMin = x - (sprite_get_width(bothBox1_spr)/2) - _marg;
+				var _xMax = x + (sprite_get_width(bothBox1_spr)/2) + _marg;
+				var _yMin = y - (sprite_get_height(bothBox1_spr)/2) - _marg;
+				var _yMax = y + (sprite_get_height(bothBox1_spr)/2) + _marg;
+	
 				if(empurrando){
-					criaParticulas(PartEmpurrada_obj, x, x, y, y);
+					criaParticulas(PartEmpurrada_obj, _xMin, _xMax, _yMin, _yMax);
 				}else{
-					criaParticulas(PartPuxada_obj, x, x, y, y);
+					criaParticulas(PartPuxada_obj, _xMin, _xMax, _yMin, _yMax);
 				}
 			
 			}
