@@ -1,4 +1,5 @@
-Poeira da caixa
+Poeira da caixa - Feita
+particulas caixa
 poeira do player
 poderes do player Puxao e empurrao
 Dash do player (posso reaproveitar os poderes)

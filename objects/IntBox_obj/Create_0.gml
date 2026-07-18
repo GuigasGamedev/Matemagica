@@ -5,6 +5,9 @@ event_inherited();
 hitbox = instance_create_layer(x, y, "HitBox", boxHitbox_obj);
 
 
+criaPartMax = 40;
+criaPartTime = 0;
+
 #region metodos de sprites
 
 //esse método é chamado no próprio create. Ele determinará a sprite inicial da caixa
@@ -162,7 +165,9 @@ stateMachine = function(){
 			var _ymin = (y + (sprite_get_height(bothBox1_spr)/2)) - 50;
 			var _ymax = (y + (sprite_get_height(bothBox1_spr)/2));
 			
-			criaParticulas(poeiraCaixa_obj, _xMin, _xMax, _ymin, _ymax);
+			if(global.gamefeel){
+				criaParticulas(poeiraCaixa_obj, _xMin, _xMax, _ymin, _ymax);
+			}
 			//este case sai do 5 pelo método de colisão com a limitHitBox_obj
 		break;
 		case 6: //desligando
