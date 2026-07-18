@@ -1,7 +1,14 @@
 Poeira da caixa - Feita
-particulas caixa
-poeira do player
-poderes do player Puxao e empurrao
-Dash do player (posso reaproveitar os poderes)
+particulas caixa - Feita
+
+Preciso da sprite{
+	poeira do player
+	poderes do player Puxao e empurrao
+	Dash do player (posso reaproveitar os poderes)
+}
+
 Poeira ambiente
-Teleporte
+
+Preciso da animação{
+	Teleporte
+}

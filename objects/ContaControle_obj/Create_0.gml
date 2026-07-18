@@ -1,7 +1,9 @@
 boxSize = sprite_get_width(bothBox1_spr);
 
+partTimer = 0
+partTimerMax = 120;
 
-function calcularExpressoes()
+calcularExpressoes = function()
 {
     var _quantidade = instance_number(IntBox_obj);
 
@@ -24,7 +26,7 @@ function calcularExpressoes()
     }
 }
 
-function lerExpressao(_boxInicial)
+lerExpressao = function(_boxInicial)
 {
     var _expressao = [];
 
@@ -43,7 +45,7 @@ function lerExpressao(_boxInicial)
     validarExpressao(_expressao);
 }
 
-function validarExpressao(_expressao)
+validarExpressao = function(_expressao)
 {
     var _tamanho = array_length(_expressao);
 
@@ -76,7 +78,7 @@ function validarExpressao(_expressao)
     calcularResultado(_expressao);
 }
 
-function calcularResultado(_expressao)
+calcularResultado = function(_expressao)
 {
     var _resultado = _expressao[0].valor;
 
@@ -123,7 +125,7 @@ function calcularResultado(_expressao)
 	}
 }
 
-function encontrarCaixa(_x, _y)
+encontrarCaixa = function(_x, _y)
 {
     var _qtd = instance_number(IntBox_obj);
 
@@ -138,7 +140,7 @@ function encontrarCaixa(_x, _y)
     return noone;
 }
 
-function verificarPortas(_resultado)
+verificarPortas = function(_resultado)
 {
     with(portao_obj)
     {
