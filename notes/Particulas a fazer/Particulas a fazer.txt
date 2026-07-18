@@ -7,7 +7,7 @@ Preciso da sprite{
 	Dash do player (posso reaproveitar os poderes)
 }
 
-Poeira ambiente
+Poeira ambiente - Feita
 
 Preciso da animação{
 	Teleporte

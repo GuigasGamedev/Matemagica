@@ -139,8 +139,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"SalaTeste","path":"rooms/SalaTeste/SalaTeste.yy",},},
+    {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Hub","path":"rooms/Hub/Hub.yy",},},
     {"roomId":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
     {"roomId":{"name":"SalaBase","path":"rooms/SalaBase/SalaBase.yy",},},
