@@ -177,6 +177,16 @@ stateMachine = function(){
 			var _ymax = (y + (sprite_get_height(bothBox1_spr)/2));
 			
 			if(global.gamefeel){
+			
+				if(empurrando){
+					criaParticulas(PartEmpurrada_obj, x, x, y, y);
+				}else{
+					criaParticulas(PartPuxada_obj, x, x, y, y);
+				}
+			
+			}
+			
+			if(global.gamefeel){
 				criaParticulas(poeiraCaixa_obj, _xMin, _xMax, _ymin, _ymax);
 			}
 			//este case sai do 5 pelo método de colisão com a limitHitBox_obj

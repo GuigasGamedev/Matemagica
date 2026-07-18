@@ -1,15 +1,15 @@
+direction = random(349);
+
 scale = random_range(.6, .8);
 
 image_yscale = scale;
 image_xscale = scale;
 
-direction = random(349);
+speed = random_range(10, 15);
 
-speed = random_range(5, 30);
+smoothSpeed = .03;
 
-smoothSpeed = .03
-
-alphaDecay = random_range(.03, .06);
+alphaDecay = random_range(.01, .03);
 
 image_alpha = 1;
 
