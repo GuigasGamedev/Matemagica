@@ -16,21 +16,21 @@ transição entre salas - FEITO
 
 Hub com portal pra cada mundo - FEITO
 
-sistema de particulas e botar particula em tudo - A Fazer
+sistema de particulas e botar particula em tudo -  >>>>>> A Fazer <<<<<<<<
 
-deixar os cubos e os elementos (numero e operador) bonitos - Feito
+deixar os cubos e os elementos (numero e operador) bonitos - FEITO
 
-Adicionar sprites - A fazer{
+Adicionar sprites - >>>>>> A fazer <<<<<<<< {
 
 	Tp, portão entrada e saida, menu.
 
 }
 
-tentar fazer iluminação dinamica - Deu super certo
+tentar fazer iluminação dinamica - FEITO
 
-diminuir boxHitbox - Ja foi, deu certo
+diminuir boxHitbox - FEITO
 
-camera suave
+camera suave - FEITO mas pode ser que de erro em alguma sala
 
 animação do tp
 

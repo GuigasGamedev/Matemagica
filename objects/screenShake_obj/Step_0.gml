@@ -1,6 +1,11 @@
 
 	var _cam_x = player_obj.x - camera_get_view_width(view_camera[0]) / 2;
 	var _cam_y = player_obj.y - camera_get_view_height(view_camera[0]) / 2;
+	
+	var _smooth = .2;
+	
+	trueX = lerp(trueX, _cam_x, _smooth);
+	trueY = lerp(trueY, _cam_y, _smooth);
 
 if (shake){ 
 	shake_time --; 
@@ -24,6 +29,10 @@ if (shake){
    } 
 }else{
 	if(instance_exists(player_obj)){ 
-		camera_set_view_pos(view_camera[0], round(_cam_x), round(_cam_y)); 
+		if(global.gamefeel){
+			camera_set_view_pos(view_camera[0], round(trueX), round(trueY)); 
+		}else{
+			camera_set_view_pos(view_camera[0], round(_cam_x), round(_cam_y)); 
+		}
 	}
 }
