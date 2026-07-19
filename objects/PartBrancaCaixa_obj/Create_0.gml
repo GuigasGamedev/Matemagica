@@ -1,5 +1,7 @@
 scale = random_range(.6, .8);
 
+luz = instance_create_layer(x, y, "Particulas", LuzPart_obj);
+
 image_yscale = scale;
 image_xscale = scale;
 

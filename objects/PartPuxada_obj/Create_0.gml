@@ -2,6 +2,11 @@ direction = random(349);
 
 speed = random_range(5, 10);
 
+luz = instance_create_layer(x, y, "Particulas", LuzPart_obj);
+luz.image_blend = c_aqua;
+luz.image_xscale = 1.2;
+luz.image_yscale = 1.2;
+
 scale = random_range(.7, 1.3);
 
 image_yscale = scale;

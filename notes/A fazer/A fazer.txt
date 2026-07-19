@@ -18,9 +18,13 @@ Hub com portal pra cada mundo - FEITO
 
 sistema de particulas e botar particula em tudo - A Fazer
 
-deixar os cubos e os elementos (numero e operador) bonitos
+deixar os cubos e os elementos (numero e operador) bonitos - Feito
 
-Adicionar sprites
+Adicionar sprites - A fazer{
+
+	Tp, portão entrada e saida, menu.
+
+}
 
 tentar fazer iluminação dinamica
 

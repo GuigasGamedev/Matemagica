@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"PartRoxaCaixa_obj",
+  "%Name":"LuzPart_obj",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"PartRoxaCaixa_obj",
+  "name":"LuzPart_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Caixa",
-    "path":"folders/Particles/Caixa.yy",
+    "name":"Particles",
+    "path":"folders/Particles.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"ParticulaRoxa_spr",
-    "path":"sprites/ParticulaRoxa_spr/ParticulaRoxa_spr.yy",
+    "name":"luz_spr",
+    "path":"sprites/luz_spr/luz_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,
