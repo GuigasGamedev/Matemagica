@@ -395,6 +395,101 @@ stateMachine = function(_estado, _estadoLado){
 		break;
 		case(3):		//Poder
 		
+			if(global.gamefeel){
+			
+				if(keyboard_check_pressed(ord("Q"))){
+					var _dir = point_direction(x, y, objId.x, objId.y);
+					var _dirFinal = 0;
+					
+					if(_dir < 45 || _dir > 315){
+						_dirFinal = 1;	//direita
+					}else
+					if(_dir > 45 && _dir < 135){
+						_dirFinal = 2;    //cima
+					}else
+					if(_dir > 135 && _dir < 230){
+						_dirFinal = 3;    //esquerda
+					}else
+					if(_dir > 230 && _dir < 315){
+						_dirFinal = 4;    //baixo
+					}
+					
+					var _valorA = 0;
+					var _valorB = 0;
+					
+					switch(_dirFinal){
+						case(1):
+							_valorA = -5;
+							_valorB = 5;
+						break;
+						case(2):
+							_valorA = 85;
+							_valorB = 95;
+						break;
+						case(3):
+							_valorA = 175;
+							_valorB = 185;
+						break;
+						case(4):
+							_valorA = 265;
+							_valorB = 275;
+						break;
+					}
+					if(layer_exists("Particulas")){
+						for(var _i = 0; _i < 20; _i++){
+							var _push = instance_create_layer(x, y, "Particulas", EmpurraPart_obj);	
+							_push.direction = random_range(_valorA, _valorB);
+						}
+					}
+				}else if(keyboard_check_pressed(ord("E"))){
+				
+					var _dir = point_direction(x, y, objId.x, objId.y);
+					var _dirFinal = 0;
+					var _oX = 0;
+					var _oY = 0;
+					
+					if(_dir < 45 || _dir > 315){
+						_dirFinal = 1;	//direita
+					}else
+					if(_dir > 45 && _dir < 135){
+						_dirFinal = 2;    //cima
+					}else
+					if(_dir > 135 && _dir < 230){
+						_dirFinal = 3;    //esquerda
+					}else
+					if(_dir > 230 && _dir < 315){
+						_dirFinal = 4;    //baixo
+					}
+					
+					switch(_dirFinal){
+						case(1):
+							_oX = random_range(x + 300, x + 500);
+							_oY = random_range(y - 100, y + 100);
+						break;
+						case(2):
+							_oX = random_range(x - 100, x + 100);
+							_oY = random_range(y - 300, y -500);
+						break;
+						case(3):
+							_oX = random_range(x - 500, x - 300);
+							_oY = random_range(y - 100, y + 100);
+						break;
+						case(4):
+							_oX = random_range(x - 100, x + 100);
+							_oY = random_range(y + 300, y + 500);
+						break;
+					}
+					if(layer_exists("Particulas")){
+						for(var _i = 0; _i < 20; _i++){
+							var _push = instance_create_layer(_oX, _oY, "Particulas", PuxaPart_obj);	
+							_push.direction = point_direction(_push.x, _push.y, x, y);
+						}
+					}
+				
+				}
+			
+			}
+		
 			switch(_estadoLado){
 			
 				case(0):	//Frente
