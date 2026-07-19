@@ -423,6 +423,8 @@ stateMachine = function(_estado, _estadoLado){
 		break;
 		case(4):	//empurrado
 			
+			var _meiaSpr = sprite_get_height(idle_spr) / 2;
+			
 			switch(_estadoLado){
 			
 				case(0):	//Frente
@@ -446,6 +448,10 @@ stateMachine = function(_estado, _estadoLado){
 					
 				break;
 			
+			}
+			
+			if(global.gamefeel){
+				criaParticulas(poeiraCaixa_obj, x, x, y + _meiaSpr, y + _meiaSpr);
 			}
 			
 		break;
