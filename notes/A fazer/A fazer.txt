@@ -26,9 +26,9 @@ Adicionar sprites - A fazer{
 
 }
 
-tentar fazer iluminação dinamica
+tentar fazer iluminação dinamica - Deu super certo
 
-diminuir boxHitbox
+diminuir boxHitbox - Ja foi, deu certo
 
 camera suave
 
