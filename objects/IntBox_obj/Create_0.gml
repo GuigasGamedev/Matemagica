@@ -1,10 +1,13 @@
 event_inherited();
 
+ramDir = random_range(-1, 1);
+
 ligandoParticulas = 1;
 moveParticulas = 1;
 
 hitbox = instance_create_layer(x, y, "HitBox", boxHitbox_obj);
 
+floatTimer = random(360);
 
 criaPartMax = 40;
 criaPartTime = 0;
@@ -139,7 +142,7 @@ stateMachine = function(){
 					ligandoParticulas = 0;
 				}
 				}
-			image_speed = 1.3;
+			image_speed = 2;
 			if(image_index >= 7){
 				estado = 2;	
 			}
@@ -180,15 +183,15 @@ stateMachine = function(){
 			
 				var _marg = 75;
 	
-				var _xMin = x - (sprite_get_width(bothBox1_spr)/2) - _marg;
-				var _xMax = x + (sprite_get_width(bothBox1_spr)/2) + _marg;
-				var _yMin = y - (sprite_get_height(bothBox1_spr)/2) - _marg;
-				var _yMax = y + (sprite_get_height(bothBox1_spr)/2) + _marg;
+				var _xMinp = x - (sprite_get_width(bothBox1_spr)/2) - _marg;
+				var _xMaxp = x + (sprite_get_width(bothBox1_spr)/2) + _marg;
+				var _yMinp = y - (sprite_get_height(bothBox1_spr)/2) - _marg;
+				var _yMaxp = y + (sprite_get_height(bothBox1_spr)/2) + _marg;
 	
 				if(empurrando){
-					criaParticulas(PartEmpurrada_obj, _xMin, _xMax, _yMin, _yMax);
+					criaParticulas(PartEmpurrada_obj, _xMinp, _xMaxp, _yMinp, _yMaxp);
 				}else{
-					criaParticulas(PartPuxada_obj, _xMin, _xMax, _yMin, _yMax);
+					criaParticulas(PartPuxada_obj, _xMinp, _xMaxp, _yMinp, _yMaxp);
 				}
 			
 			}
@@ -217,6 +220,6 @@ stateMachine = function(){
 #region Chamando métodos no create
 
 //chamando o método para determinar a sprite da caixa assim que ela é criada
-spriteChange();
+//spriteChange();
 
 #endregion

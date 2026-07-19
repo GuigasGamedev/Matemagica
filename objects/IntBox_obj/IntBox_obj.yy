@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"pullBox1_spr",
-    "path":"sprites/pullBox1_spr/pullBox1_spr.yy",
+    "name":"MathBox_spr",
+    "path":"sprites/MathBox_spr/MathBox_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,

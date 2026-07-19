@@ -1,5 +1,7 @@
 event_inherited();
 
+floatTimer += 0.08;
+
 if(global.gamefeel){
 	if(criaPartTime <= 0){
 	
