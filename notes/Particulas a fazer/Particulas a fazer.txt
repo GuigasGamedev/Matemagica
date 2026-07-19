@@ -1,12 +1,12 @@
 Poeira da caixa - Feita
 particulas caixa - Feita
 
-particulas colisao caixa - 
+particulas colisao caixa - Vai da trabalho e ja ta bom
 
 Preciso da sprite{
-	poeira do player andando
-	poeira do player empurrado
-	poderes do player Puxao e empurrao
+	poeira do player andando 
+	poeira do player empurrado - Feita
+	poderes do player Puxao e empurrao - Feita
 	Dash do player (posso reaproveitar os poderes)
 }
 
@@ -14,4 +14,5 @@ Poeira ambiente - Feita
 
 Preciso da animação{
 	Teleporte
+	Portao
 }
