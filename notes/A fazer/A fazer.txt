@@ -22,7 +22,7 @@ deixar os cubos e os elementos (numero e operador) bonitos - FEITO
 
 Adicionar sprites - >>>>>> A fazer <<<<<<<< {
 
-	Tp, portão entrada e saida, menu.
+	Tp - feito, portão entrada e saida, menu.
 
 }
 
