@@ -1,1 +1,1 @@
-draw_text(100, 100, estado);
+//draw_text(100, 100, estado);

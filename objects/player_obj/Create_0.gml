@@ -40,8 +40,12 @@ escalaX = 4;
 escalaY = 4
 escalaPadrao = 4;
 
+timerTp = 60;
+estagioTp = 0;
+alfaBrancoTp = 0;
+tpSpriteId = branco_spr;
+
 animTimer = 0;
-//animando = 0;
 
 
 box = [];
@@ -877,16 +881,42 @@ stateMachine = function(_estado, _estadoLado){
 			
 			canControl = 0;
 			global.tutoriais = 0;
-
-			x = lerp(x, global.tpip.x, _smooth);
-			y = lerp(y, global.tpip.y, _smooth);
 			
-			if((x - global.tpip.x < 5 or x - global.tpip.x < -5) and (y - global.tpip.y < 5 or x - global.tpip.x < -5)){
-			
-				//animaçao de tp
+			if(estagioTp == 0){
 				
-				room_goto(global.roomDest);
+				if(timerTp > 0){
+					timerTp--
+					alfaBrancoTp += .03;
+					
+					if(timerTp <= 0){	
+						estagioTp = 1;
+						timerTp = 60;
+						alfaBrancoTp = 1;
+						visivel = 0;
+						tpSpriteId = PartBolaBranca_spr;
+						
+						if(global.gamefeel){
+							for(var _i = 0; _i < 15; _i++){
+								criaParticulas(PartBPortao_obj, x, x, y, y);
+							}
+						}
+					}
+				}
 			
+			}else{
+			
+			
+				x = lerp(x, global.tpip.x, _smooth);
+				y = lerp(y, global.tpip.y, _smooth);
+			
+				if((x - global.tpip.x < 5 or x - global.tpip.x < -5) and (y - global.tpip.y < 5 or x - global.tpip.x < -5)){
+			
+					//animaçao de tp
+				
+					room_goto(global.roomDest);
+			
+				}
+				
 			}
 			
 		break;
