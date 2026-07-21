@@ -254,7 +254,16 @@ movimento = function(){	//recebe uma booleana para saber se o jogador pode andar
 	
 				velDash = velDashMax;				//velocidade do dash recebe a velocidade de dash máxima
 				dashCD = dashCDMAX;					//aumenta o cd do dash
-			
+				
+				if(global.gamefeel){
+					escalaY = .2;
+					if(estadoLado != 3){
+						escalaX = 6;
+					}else{
+						escalaX = -6;
+					}
+				}
+
 				dashDurationTimer = dashDuration;	//aumenta o tempo da duração do dash
 	
 			}
@@ -558,26 +567,88 @@ stateMachine = function(_estado, _estadoLado){
 		break;
 		case(2):		//Dash
 		
+			spriteID = correndo_spr;
+				
+				if(global.gamefeel){
+				
+					if(escalaY < escalaPadrao - .1){
+						escalaY = lerp(escalaY, escalaPadrao, .1);
+					}else{
+						escalaY = escalaPadrao;	
+					}	
+				
+					if(estadoLado != 3){
+						if(escalaX > escalaPadrao + .1){
+							escalaX = lerp(escalaX, escalaPadrao, .1);
+						}else{
+							escalaX = escalaPadrao;	
+						}	
+					}else{
+						if(escalaX < -escalaPadrao - .1){
+						escalaX = lerp(escalaX, -escalaPadrao, .1);
+						}else{
+							escalaX = -escalaPadrao;	
+						}
+					}
+				
+				
+					var _part = choose(1, 2);
+					if(_part == 1){
+						criaParticulas(PartPuxada_obj, x, x, y, y);
+					}else{
+						criaParticulas(PartEmpurrada_obj, x, x, y, y);
+					}
+				
+				}
+		
 			switch(_estadoLado){
 			
 				case(0):	//Frente
 					
-					show_debug_message("dash frente");
+					subimage = 0;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 0;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 				case(1):	//Direita
 					
-					show_debug_message("dash direita");
+					subimage = 7;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 1;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 				case(2):	//Cima
 					
-					show_debug_message("dash cima");
+					subimage = 15;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 3;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 				case(3):	//Esquerda
 					
-					show_debug_message("dash esquerda");
+					subimage = 7;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 1;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 			
