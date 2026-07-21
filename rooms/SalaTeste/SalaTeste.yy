@@ -17,7 +17,6 @@
     {"name":"inst_76C9151B","path":"rooms/SalaTeste/SalaTeste.yy",},
     {"name":"inst_11C0A32","path":"rooms/SalaTeste/SalaTeste.yy",},
     {"name":"inst_530DAA1F","path":"rooms/SalaTeste/SalaTeste.yy",},
-    {"name":"inst_74E72C7D","path":"rooms/SalaTeste/SalaTeste.yy",},
     {"name":"inst_5C02754F","path":"rooms/SalaTeste/SalaTeste.yy",},
     {"name":"inst_7CF21E8","path":"rooms/SalaTeste/SalaTeste.yy",},
   ],
@@ -26,10 +25,6 @@
     {"$GMRInstanceLayer":"","%Name":"Control","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_7864A0C0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7864A0C0","objectId":{"name":"ContaControle_obj","path":"objects/ContaControle_obj/ContaControle_obj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":32.0,},
         {"$GMRInstance":"v4","%Name":"inst_530DAA1F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_530DAA1F","objectId":{"name":"tutorial_obj","path":"objects/tutorial_obj/tutorial_obj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
-        {"$GMRInstance":"v4","%Name":"inst_74E72C7D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74E72C7D","objectId":{"name":"EntreSalas_obj","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"EntreSalas_obj","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"propertyId":{"name":"chegada","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"EntreSalas_obj","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"propertyId":{"name":"roomD","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"resource":{"name":"SalaTeste_1","path":"rooms/SalaTeste_1/SalaTeste_1.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"SalaTeste_1",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1120.0,"y":992.0,},
         {"$GMRInstance":"v4","%Name":"inst_5C02754F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C02754F","objectId":{"name":"EntreSalas_obj","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"EntreSalas_obj","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"propertyId":{"name":"chegada","path":"objects/EntreSalas_obj/EntreSalas_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1472.0,"y":992.0,},

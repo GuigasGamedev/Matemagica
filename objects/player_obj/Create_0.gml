@@ -33,6 +33,18 @@ interCDMax = 60;		//tempo máx para o jogador interagir com algo novamente
 
 objId = noone;			//variável que guarda o id do objeto selecionado
 
+//variaveis para desenho:
+spriteID = idle_spr;
+subimage = 0;
+escalaX = 4;
+escalaY = 4
+escalaPadrao = 4;
+
+animTimerMax = 30;
+animTimer = 0;
+animando = 0;
+
+
 box = [];
 colisions = [];
 
@@ -311,26 +323,113 @@ stateMachine = function(_estado, _estadoLado){
 	
 		case(0):		//Idol
 		
+		spriteID = idle_spr;
+		
 			switch(_estadoLado){
 			
 				case(0):	//Frente
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("idol frente");
+					if(subimage > 4){
+						subimage = 0;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=0 and subimage<3){
+								subimage++;
+							}else{
+								subimage = 0;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 				case(1):	//Direita
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("idol direita");
+					if(subimage < 4 or subimage > 8){
+						subimage = 4;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=4 and subimage<7){
+								subimage++;
+							}else{
+								subimage = 4;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 				case(2):	//Cima
+				
+					escalaX = escalaPadrao;
+				
+					if(subimage < 8){
+						subimage = 8;	
+					}
+
 					
-					show_debug_message("idol cima");
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=8 and subimage<11){
+								subimage++;
+							}else{
+								subimage = 8;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 				case(3):	//Esquerda
 					
-					show_debug_message("idol esquerda");
+					escalaX = -escalaPadrao;
+				
+					if(subimage < 4 or subimage > 8){
+						subimage = 4;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=4 and subimage<7){
+								subimage++;
+							}else{
+								subimage = 4;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 			
