@@ -16,4 +16,4 @@ global.estagioTutorial = 0;
 
 
 global.estagioNivel = 0;
-global.primeiraVezHub = 1;
+global.primeiraVezHub = 0;
