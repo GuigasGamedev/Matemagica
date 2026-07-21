@@ -40,9 +40,8 @@ escalaX = 4;
 escalaY = 4
 escalaPadrao = 4;
 
-animTimerMax = 30;
 animTimer = 0;
-animando = 0;
+//animando = 0;
 
 
 box = [];
@@ -324,6 +323,7 @@ stateMachine = function(_estado, _estadoLado){
 		case(0):		//Idol
 		
 		spriteID = idle_spr;
+		escalaY = escalaPadrao;
 		
 			switch(_estadoLado){
 			
@@ -331,7 +331,7 @@ stateMachine = function(_estado, _estadoLado){
 				
 					escalaX = escalaPadrao;
 					
-					if(subimage > 4){
+					if(subimage >= 4){
 						subimage = 0;	
 					}
 					
@@ -357,7 +357,7 @@ stateMachine = function(_estado, _estadoLado){
 				
 					escalaX = escalaPadrao;
 					
-					if(subimage < 4 or subimage > 8){
+					if(subimage <= 4 or subimage >= 8){
 						subimage = 4;	
 					}
 					
@@ -410,7 +410,7 @@ stateMachine = function(_estado, _estadoLado){
 					
 					escalaX = -escalaPadrao;
 				
-					if(subimage < 4 or subimage > 8){
+					if(subimage <= 4 or subimage >= 8){
 						subimage = 4;	
 					}
 					
@@ -438,26 +438,118 @@ stateMachine = function(_estado, _estadoLado){
 		break;
 		case(1):		//Andando
 		
+			spriteID = correndo_spr;
+			escalaY = escalaPadrao;
+			
+			if(animTimer > 15){
+				animTimer = 0;	
+			}
+		
 			switch(_estadoLado){
 			
 				case(0):	//Frente
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("andando frente");
+					if(subimage > 6){
+						subimage = 0;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=0 and subimage<5){
+								subimage++;
+							}else{
+								subimage = 0;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 				case(1):	//Direita
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("andando direita");
+					if(subimage < 6 or subimage > 12){
+						subimage = 6;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=6 and subimage<11){
+								subimage++;
+							}else{
+								subimage = 6;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 				case(2):	//Cima
+				
+					escalaX = escalaPadrao;
+				
+					if(subimage < 12){
+						subimage = 12;	
+					}
+
 					
-					show_debug_message("andando cima");
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=12 and subimage<16){
+								subimage++;
+							}else{
+								subimage = 12;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 				case(3):	//Esquerda
 					
-					show_debug_message("andando esquerda");
+					escalaX = -escalaPadrao;
+					
+					if(subimage < 6 or subimage > 12){
+						subimage = 6;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=6 and subimage<11){
+								subimage++;
+							}else{
+								subimage = 6;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 			
