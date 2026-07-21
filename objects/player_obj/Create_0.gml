@@ -472,6 +472,15 @@ stateMachine = function(_estado, _estadoLado){
 						
 							if(subimage>=0 and subimage<5){
 								subimage++;
+								
+								if(global.gamefeel and(subimage == 1 or subimage == 4)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
 							}else{
 								subimage = 0;
 							}
@@ -498,6 +507,15 @@ stateMachine = function(_estado, _estadoLado){
 						
 							if(subimage>=6 and subimage<11){
 								subimage++;
+								
+								if(global.gamefeel and(subimage == 8 or subimage == 11)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
 							}else{
 								subimage = 6;
 							}
@@ -525,6 +543,15 @@ stateMachine = function(_estado, _estadoLado){
 						
 							if(subimage>=12 and subimage<16){
 								subimage++;
+								
+								if(global.gamefeel and(subimage == 13 or subimage == 16)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
 							}else{
 								subimage = 12;
 							}
@@ -551,6 +578,15 @@ stateMachine = function(_estado, _estadoLado){
 						
 							if(subimage>=6 and subimage<11){
 								subimage++;
+								
+								if(global.gamefeel and(subimage == 8 or subimage == 11)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
 							}else{
 								subimage = 6;
 							}
@@ -591,6 +627,7 @@ stateMachine = function(_estado, _estadoLado){
 						}
 					}
 				
+					criaParticulas(poeiraCaixa_obj, x, x, y, y);
 				
 					var _part = choose(1, 2);
 					if(_part == 1){
@@ -752,6 +789,7 @@ stateMachine = function(_estado, _estadoLado){
 			
 			}
 		
+			/*
 			switch(_estadoLado){
 			
 				case(0):	//Frente
@@ -776,12 +814,14 @@ stateMachine = function(_estado, _estadoLado){
 				break;
 			
 			}
+			*/
 		
 		break;
 		case(4):	//empurrado
 			
 			var _meiaSpr = sprite_get_height(idle_spr) / 2;
 			
+			/*
 			switch(_estadoLado){
 			
 				case(0):	//Frente
@@ -806,6 +846,7 @@ stateMachine = function(_estado, _estadoLado){
 				break;
 			
 			}
+			*/
 			
 			if(global.gamefeel){
 				criaParticulas(poeiraCaixa_obj, x, x, y + _meiaSpr, y + _meiaSpr);
@@ -832,7 +873,7 @@ stateMachine = function(_estado, _estadoLado){
 			spriteID = idle_spr;
 			subimage = 0;
 			
-			var _smooth = .2;
+			var _smooth = .08;
 			
 			canControl = 0;
 			global.tutoriais = 0;

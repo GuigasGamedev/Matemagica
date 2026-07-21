@@ -22,20 +22,24 @@ if(abrindo){
 	
 	if(timer1<=0){
 		
-		var _xmin = x - sprite_get_width(portao_spr)/2;
-		var _xmax = x + sprite_get_width(portao_spr)/2;
-		var _ymin = y - sprite_get_width(portao_spr)/2;
-		var _ymax = y + sprite_get_width(portao_spr)/2;
+		if(global.gamefeel){
+			var _xmin = x - sprite_get_width(portao_spr)/2;
+			var _xmax = x + sprite_get_width(portao_spr)/2;
+			var _ymin = y - sprite_get_width(portao_spr)/2;
+			var _ymax = y + sprite_get_width(portao_spr)/2;
 		
-		criaParticulas(PartBPortao_obj, _xmin, _xmax, _ymin, _ymax);
+			criaParticulas(PartBPortao_obj, _xmin, _xmax, _ymin, _ymax);
+		}
 		
 		timer2--;
 		alphaBranco += .03;
 		
 		if(timer2 <= 0){
 			
-			for(var _i = 0; _i < 20; _i++){
-				criaParticulas(PartEstPortao_obj, x, x, y, y);
+			if(global.gamefeel){
+				for(var _i = 0; _i < 20; _i++){
+					criaParticulas(PartEstPortao_obj, x, x, y, y);
+				}
 			}
 			
 			instance_destroy(id);

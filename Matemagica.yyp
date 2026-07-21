@@ -166,10 +166,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Hub","path":"rooms/Hub/Hub.yy",},},
     {"roomId":{"name":"SalaTeste","path":"rooms/SalaTeste/SalaTeste.yy",},},
     {"roomId":{"name":"MenuPrincipal","path":"rooms/MenuPrincipal/MenuPrincipal.yy",},},
     {"roomId":{"name":"SalaBase","path":"rooms/SalaBase/SalaBase.yy",},},
-    {"roomId":{"name":"Hub","path":"rooms/Hub/Hub.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Soma_1","path":"rooms/Soma_1/Soma_1.yy",},},
   ],
