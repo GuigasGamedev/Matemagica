@@ -1,27 +1,27 @@
 	//x e y iniciais dos textos
 	var _x1			= 100;
-	var _y1			= 250;
+	var _y1			= 300;
 	
 	//variaves para desnhar as opções
 	var _fonteMenu			= fontMenu_fnt;
 	var _corMenu			= c_white;
 	var _corSecund			= c_ltgray;
-	var _corSelec			= c_red;
-	var _corSelecSecund		= c_maroon;
+	var _corSelec			= c_yellow;
+	var _corSelecSecund		= c_orange;
 	var _alinhamentoVMenu	= fa_middle;
 	var _alinhamentoHMenu	= fa_left;
 	var _alinhamentoHTitulo	= fa_middle;
 	
 	//distancia entre cada opção
-	var _marg		= 80;
+	var _marg		= 160;
 	
 	//coordenadas do mouse
 	var _mouseX		= device_mouse_x_to_gui(0);
 	var _mouseY		= device_mouse_y_to_gui(0);
 	
 	//valor do efeito Stretch para x e y
-	var _xScaVal	= 1.5;
-	var _yScaVal	= 0.5;
+	var _xScaVal	= 1.3;
+	var _yScaVal	= 1.3;
 	
 	//velocidade do efeito Stretch
 	var _vellerp	= 0.3;
@@ -83,6 +83,8 @@ if(menuPrincipal){
 					break;
 					case 1: //Continuar
 					
+						game_end();
+					
 					break;
 					case 2:	//Opcoes
 					
@@ -114,16 +116,18 @@ if(menuPrincipal){
 	zeraTexto();
 	
 	//reseta a variavel do stretch para o valor original constantemente
-	xStretch = lerp(xStretch, 1, _vellerp);
-	yStretch = lerp(yStretch, 1, _vellerp);
+	//xStretch = lerp(xStretch, 1, _vellerp);
+	//yStretch = lerp(yStretch, 1, _vellerp);
 	
 	//definindo os limites do lerp
+	/*
 	if(xStretch < 1.01){
 		xStretch = 1;	
 	}
 	if(yStretch > .99){
 		yStretch = 1;	
 	}
+	*/
 	
 	
 }
