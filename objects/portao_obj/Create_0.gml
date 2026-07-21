@@ -1,2 +1,8 @@
 abrindo = 0;
-timer = 60;
+subimage = 0;
+
+timer1 = 30;
+timer2 = 120;
+alphaBranco = 0;
+
+floatTimer = random(360);

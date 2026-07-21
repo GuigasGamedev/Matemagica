@@ -757,6 +757,10 @@ stateMachine = function(_estado, _estadoLado){
 		
 		break;
 		case(6):	//tp
+		
+			spriteID = idle_spr;
+			subimage = 0;
+			
 			var _smooth = .2;
 			
 			canControl = 0;
