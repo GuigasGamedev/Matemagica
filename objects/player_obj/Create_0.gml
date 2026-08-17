@@ -33,6 +33,21 @@ interCDMax = 60;		//tempo máx para o jogador interagir com algo novamente
 
 objId = noone;			//variável que guarda o id do objeto selecionado
 
+//variaveis para desenho:
+spriteID = idle_spr;
+subimage = 0;
+escalaX = 4;
+escalaY = 4
+escalaPadrao = 4;
+
+timerTp = 60;
+estagioTp = 0;
+alfaBrancoTp = 0;
+tpSpriteId = branco_spr;
+
+animTimer = 0;
+
+
 box = [];
 colisions = [];
 
@@ -243,7 +258,16 @@ movimento = function(){	//recebe uma booleana para saber se o jogador pode andar
 	
 				velDash = velDashMax;				//velocidade do dash recebe a velocidade de dash máxima
 				dashCD = dashCDMAX;					//aumenta o cd do dash
-			
+				
+				if(global.gamefeel){
+					escalaY = .2;
+					if(estadoLado != 3){
+						escalaX = 6;
+					}else{
+						escalaX = -6;
+					}
+				}
+
 				dashDurationTimer = dashDuration;	//aumenta o tempo da duração do dash
 	
 			}
@@ -311,26 +335,114 @@ stateMachine = function(_estado, _estadoLado){
 	
 		case(0):		//Idol
 		
+		spriteID = idle_spr;
+		escalaY = escalaPadrao;
+		
 			switch(_estadoLado){
 			
 				case(0):	//Frente
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("idol frente");
+					if(subimage >= 4){
+						subimage = 0;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=0 and subimage<3){
+								subimage++;
+							}else{
+								subimage = 0;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 				case(1):	//Direita
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("idol direita");
+					if(subimage <= 4 or subimage >= 8){
+						subimage = 4;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=4 and subimage<7){
+								subimage++;
+							}else{
+								subimage = 4;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 				case(2):	//Cima
+				
+					escalaX = escalaPadrao;
+				
+					if(subimage < 8){
+						subimage = 8;	
+					}
+
 					
-					show_debug_message("idol cima");
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=8 and subimage<11){
+								subimage++;
+							}else{
+								subimage = 8;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 				case(3):	//Esquerda
 					
-					show_debug_message("idol esquerda");
+					escalaX = -escalaPadrao;
+				
+					if(subimage <= 4 or subimage >= 8){
+						subimage = 4;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=4 and subimage<7){
+								subimage++;
+							}else{
+								subimage = 4;
+							}
+							animTimer = 30;
+						
+						}
+					
+					}
 					
 				break;
 			
@@ -339,26 +451,154 @@ stateMachine = function(_estado, _estadoLado){
 		break;
 		case(1):		//Andando
 		
+			spriteID = correndo_spr;
+			escalaY = escalaPadrao;
+			
+			if(animTimer > 15){
+				animTimer = 0;	
+			}
+		
 			switch(_estadoLado){
 			
 				case(0):	//Frente
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("andando frente");
+					if(subimage > 6){
+						subimage = 0;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=0 and subimage<5){
+								subimage++;
+								
+								if(global.gamefeel and(subimage == 1 or subimage == 4)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
+							}else{
+								subimage = 0;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 				case(1):	//Direita
+				
+					escalaX = escalaPadrao;
 					
-					show_debug_message("andando direita");
+					if(subimage < 6 or subimage > 12){
+						subimage = 6;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=6 and subimage<11){
+								subimage++;
+								
+								if(global.gamefeel and(subimage == 8 or subimage == 11)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
+							}else{
+								subimage = 6;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 				case(2):	//Cima
+				
+					escalaX = escalaPadrao;
+				
+					if(subimage < 12){
+						subimage = 12;	
+					}
+
 					
-					show_debug_message("andando cima");
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=12 and subimage<16){
+								subimage++;
+								
+								if(global.gamefeel and(subimage == 13 or subimage == 16)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
+							}else{
+								subimage = 12;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 				case(3):	//Esquerda
 					
-					show_debug_message("andando esquerda");
+					escalaX = -escalaPadrao;
+					
+					if(subimage < 6 or subimage > 12){
+						subimage = 6;	
+					}
+					
+					if(animTimer >= 0){
+					
+						animTimer--;
+						
+						if(animTimer <= 0){
+						
+							if(subimage>=6 and subimage<11){
+								subimage++;
+								
+								if(global.gamefeel and(subimage == 8 or subimage == 11)){
+									
+									var _meia = sprite_get_height(correndo_spr)/2;
+								
+									criaParticulas(poeiraCaixa_obj, x, x, y + _meia, y + _meia);
+								
+								}
+								
+							}else{
+								subimage = 6;
+							}
+							animTimer = 5;
+						
+						}
+					
+					}
 					
 				break;
 			
@@ -367,26 +607,89 @@ stateMachine = function(_estado, _estadoLado){
 		break;
 		case(2):		//Dash
 		
+			spriteID = correndo_spr;
+				
+				if(global.gamefeel){
+				
+					if(escalaY < escalaPadrao - .1){
+						escalaY = lerp(escalaY, escalaPadrao, .1);
+					}else{
+						escalaY = escalaPadrao;	
+					}	
+				
+					if(estadoLado != 3){
+						if(escalaX > escalaPadrao + .1){
+							escalaX = lerp(escalaX, escalaPadrao, .1);
+						}else{
+							escalaX = escalaPadrao;	
+						}	
+					}else{
+						if(escalaX < -escalaPadrao - .1){
+						escalaX = lerp(escalaX, -escalaPadrao, .1);
+						}else{
+							escalaX = -escalaPadrao;	
+						}
+					}
+				
+					criaParticulas(poeiraCaixa_obj, x, x, y, y);
+				
+					var _part = choose(1, 2);
+					if(_part == 1){
+						criaParticulas(PartPuxada_obj, x, x, y, y);
+					}else{
+						criaParticulas(PartEmpurrada_obj, x, x, y, y);
+					}
+				
+				}
+		
 			switch(_estadoLado){
 			
 				case(0):	//Frente
 					
-					show_debug_message("dash frente");
+					subimage = 0;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 0;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 				case(1):	//Direita
 					
-					show_debug_message("dash direita");
+					subimage = 7;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 1;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 				case(2):	//Cima
 					
-					show_debug_message("dash cima");
+					subimage = 15;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 3;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 				case(3):	//Esquerda
 					
-					show_debug_message("dash esquerda");
+					subimage = 7;
+					
+					if(layer_exists("Particulas") and global.gamefeel){
+						var _sombra = instance_create_layer(x, y, "Particulas", DashPart_obj);
+						_sombra.subimg = 1;
+						_sombra.image_yscale = escalaY - .3;
+						_sombra.image_xscale = escalaX - .3;
+					}
 					
 				break;
 			
@@ -490,6 +793,7 @@ stateMachine = function(_estado, _estadoLado){
 			
 			}
 		
+			/*
 			switch(_estadoLado){
 			
 				case(0):	//Frente
@@ -514,12 +818,14 @@ stateMachine = function(_estado, _estadoLado){
 				break;
 			
 			}
+			*/
 		
 		break;
 		case(4):	//empurrado
 			
 			var _meiaSpr = sprite_get_height(idle_spr) / 2;
 			
+			/*
 			switch(_estadoLado){
 			
 				case(0):	//Frente
@@ -544,6 +850,7 @@ stateMachine = function(_estado, _estadoLado){
 				break;
 			
 			}
+			*/
 			
 			if(global.gamefeel){
 				criaParticulas(poeiraCaixa_obj, x, x, y + _meiaSpr, y + _meiaSpr);
@@ -566,20 +873,50 @@ stateMachine = function(_estado, _estadoLado){
 		
 		break;
 		case(6):	//tp
-			var _smooth = .2;
+		
+			spriteID = idle_spr;
+			subimage = 0;
+			
+			var _smooth = .08;
 			
 			canControl = 0;
 			global.tutoriais = 0;
-
-			x = lerp(x, global.tpip.x, _smooth);
-			y = lerp(y, global.tpip.y, _smooth);
 			
-			if((x - global.tpip.x < 5 or x - global.tpip.x < -5) and (y - global.tpip.y < 5 or x - global.tpip.x < -5)){
-			
-				//animaçao de tp
+			if(estagioTp == 0){
 				
-				room_goto(global.roomDest);
+				if(timerTp > 0){
+					timerTp--
+					alfaBrancoTp += .03;
+					
+					if(timerTp <= 0){	
+						estagioTp = 1;
+						timerTp = 60;
+						alfaBrancoTp = 1;
+						visivel = 0;
+						tpSpriteId = PartBolaBranca_spr;
+						
+						if(global.gamefeel){
+							for(var _i = 0; _i < 15; _i++){
+								criaParticulas(PartBPortao_obj, x, x, y, y);
+							}
+						}
+					}
+				}
 			
+			}else{
+			
+			
+				x = lerp(x, global.tpip.x, _smooth);
+				y = lerp(y, global.tpip.y, _smooth);
+			
+				if((x - global.tpip.x < 5 or x - global.tpip.x < -5) and (y - global.tpip.y < 5 or x - global.tpip.x < -5)){
+			
+					//animaçao de tp
+				
+					room_goto(global.roomDest);
+			
+				}
+				
 			}
 			
 		break;

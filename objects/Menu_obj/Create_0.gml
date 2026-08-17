@@ -10,7 +10,12 @@ target_y			= room_height - camera_get_view_height(cam);	//coordenada final da ca
 
 vel					= 4;											//velocidade da transicao
 
-movendo				= 0;											//variavel de controle para verificar se esta movendo
+movendo				= 0;				//variavel de controle para verificar se esta movendo
+
+floatTimer1 = random(360);
+floatTimer2 = random(360);
+floatTimer3 = random(360);
+floatTimer4 = random(360);
 
 //variaveis de controle da alfa dos texto de opcoes
 aparecendoMenu		= 0;
@@ -186,7 +191,7 @@ controleParalax = function(){
 #region Variaveis
 
 //Array de opcoes e index de escolha
-opcoes				= ["Novo Jogo", "Continuar", "Opções", "Sair"];
+opcoes				= ["Jogar", "Sair"];
 index				= 0;
 
 //numero de opcoes

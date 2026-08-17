@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"limitHitBox_spr",
-    "path":"sprites/limitHitBox_spr/limitHitBox_spr.yy",
+    "name":"portao_spr",
+    "path":"sprites/portao_spr/portao_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,

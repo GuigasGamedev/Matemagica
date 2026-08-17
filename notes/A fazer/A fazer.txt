@@ -20,9 +20,9 @@ sistema de particulas e botar particula em tudo -  >>>>>> A Fazer <<<<<<<<
 
 deixar os cubos e os elementos (numero e operador) bonitos - FEITO
 
-Adicionar sprites - >>>>>> A fazer <<<<<<<< {
+Adicionar sprites - Feito {
 
-	Tp - feito, portão entrada e saida, menu.
+	Tp - feito, portão entrada e saida, menu. Feito
 
 }
 

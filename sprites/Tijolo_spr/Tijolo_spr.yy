@@ -2,24 +2,24 @@
   "$GMSprite":"v2",
   "%Name":"Tijolo_spr",
   "bboxMode":0,
-  "bbox_bottom":472,
+  "bbox_bottom":942,
   "bbox_left":0,
-  "bbox_right":383,
-  "bbox_top":1,
+  "bbox_right":767,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"9e81335d-c6fe-4ccf-af52-663123cd0234","name":"9e81335d-c6fe-4ccf-af52-663123cd0234","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0fb9539a-8bd8-419d-95e2-7ebc8da8c2aa","name":"0fb9539a-8bd8-419d-95e2-7ebc8da8c2aa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":512,
+  "height":1024,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"bc798325-ce19-4824-a57d-c2c414c57dd2","blendMode":0,"displayName":"default","isLocked":false,"name":"bc798325-ce19-4824-a57d-c2c414c57dd2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"b6c6d5be-a7ab-4fa6-8912-f25a3781ac83","blendMode":0,"displayName":"default","isLocked":false,"name":"b6c6d5be-a7ab-4fa6-8912-f25a3781ac83","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Tijolo_spr",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9e81335d-c6fe-4ccf-af52-663123cd0234","path":"sprites/Tijolo_spr/Tijolo_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fc484622-81b3-4000-94e3-515250455275","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0fb9539a-8bd8-419d-95e2-7ebc8da8c2aa","path":"sprites/Tijolo_spr/Tijolo_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e73c409c-1837-4605-9adb-ab39818c18ef","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":384,
+  "width":768,
 }

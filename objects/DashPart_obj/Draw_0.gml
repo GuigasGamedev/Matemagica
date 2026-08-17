@@ -1,0 +1,1 @@
+draw_sprite_ext(imageId, subimg, x, y, image_xscale, image_yscale, 0, cor, image_alpha);
